@@ -8,7 +8,11 @@
     # Has its own copy of ShowsKit + ShowWebAuth
     target 'Demo-01' do
 #        pod 'ShowWebAuth'
+        use_frameworks!
         pod 'SnapKit'
+        pod 'Alamofire'
+        pod 'Moya'
+        pod 'SwiftyJSON'
     end
 
     # Has its own copy of ShowsKit + ShowTVAuth

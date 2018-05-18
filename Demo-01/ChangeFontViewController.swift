@@ -7,28 +7,59 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Moya
 
 class ChangeFontViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
 
+    
+    var channels:[JSON] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(self.tableView)
-        self.navigationItem.title = "change Font"
+        self.navigationItem.title = "refersh"
         self.setRightNavgationItemWithTitle(title: "Change")
+        getData()
     }
+    
+    
+    func getData() {
+        DouBanProvider.request(.channels) { (result) in
+            if case let .success(response) = result {
+                //解析数据
+                let data = try? response.mapJSON()
+                let json = JSON(data!)
+                self.channels = json["channels"].arrayValue
+                //刷新表格数据
+                DispatchQueue.main.async{
+                    self.tableView.reloadData()
+                }
+            }
+            
+        }
+    }
+    
+    
+    
+    
+    
+    
     
     override func clickRightNavgationItem() {
         print("更改了文字")
+        getData()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return channels.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableviewIndetifer", for: indexPath)
-        cell.textLabel?.text = ("第\(indexPath.row)")
+        cell.textLabel?.text = channels[indexPath.row]["name"].stringValue
         return cell
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
