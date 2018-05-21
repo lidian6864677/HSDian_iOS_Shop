@@ -13,6 +13,15 @@
         pod 'Alamofire'
         pod 'Moya'
         pod 'SwiftyJSON'
+        pod 'RxSwift'
+        pod 'Moya/RxSwift'
+        pod 'ObjectMapper'
+        pod 'RxCocoa'
+        pod 'XLPagerTabStrip'
+#        pod 'SwiftyJSON'
+#        pod 'Moya', '~> 8.0.0'
+
+
     end
 
     # Has its own copy of ShowsKit + ShowTVAuth

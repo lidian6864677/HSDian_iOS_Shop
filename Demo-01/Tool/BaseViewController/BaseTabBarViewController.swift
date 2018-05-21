@@ -22,13 +22,6 @@ class BaseTabBarViewController: UITabBarController {
     
     
     fileprivate func setUpTabBar(){
-//        let rect = CGRect(x:0,y:0,width:screenWidth,height:0.5)
-//        UIGraphicsBeginImageContext(rect.size)
-//        let context = UIGraphicsGetCurrentContext()!
-//        context.setFillColor(UIColor.red.cgColor)
-//        context.fill(rect)
-//        let image = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
         
         //这两个很主要缺一不可
 //        self.tabBar.shadowImage = image
@@ -46,10 +39,10 @@ class BaseTabBarViewController: UITabBarController {
         //设置 tabBar 工具栏字体颜色 (未选中  和  选中)
         //未选中
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.4078176022, green: 0.407827884, blue: 0.4078223705, alpha: 1),
-                                                          NSAttributedStringKey.font: UIFont.systemFont(ofSize: 11)], for: .selected)
+                                                          NSAttributedStringKey.font: UIFont.systemFont(ofSize: 10)], for: .selected)
         //选中
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1),
-                                                          NSAttributedStringKey.font: UIFont.systemFont(ofSize: 11)], for: .normal)
+                                                          NSAttributedStringKey.font: UIFont.systemFont(ofSize: 10)], for: .normal)
         
         // 设置图片选中时颜色必须设置（系统默认选中蓝色）
         UITabBar.appearance().tintColor = UIColor.black
@@ -58,13 +51,13 @@ class BaseTabBarViewController: UITabBarController {
         
     }
     fileprivate func setChildVc(){
-        prepareChildViewController(ViewController(), title: "心动", normalImage: "TabBar0_new", selectedImage: "TabBar0_new_hover")
-        prepareChildViewController(ChangeFontViewController(), title: "消息", normalImage: "TabBar1_new", selectedImage: "TabBar1_new_hover")
+        prepareChildViewController(DLJobViewController(), title: "职位", normalImage: "TabBar0_new", selectedImage: "TabBar0_new_hover")
+        prepareChildViewController(PendingViewController(), title: "待办", normalImage: "TabBar1_new", selectedImage: "TabBar1_new_hover")
         
 //        prepareChildViewController(ChangeFontViewController(), title: "", normalImage: "TabBar4_new_hover", selectedImage: "TabBar4_new_hover")
         
-        prepareChildViewController(Vc3ViewController(), title: "主页", normalImage: "TabBar2_new", selectedImage: "TabBar2_new_hover")
-        prepareChildViewController(Vc4ViewController(), title: "我的", normalImage: "TabBar3_new", selectedImage: "TabBar3_new_hover")
+        prepareChildViewController(DLMessageViewController(), title: "消息", normalImage: "TabBar2_new", selectedImage: "TabBar2_new_hover")
+        prepareChildViewController(DLMeViewController(), title: "我", normalImage: "TabBar3_new", selectedImage: "TabBar3_new_hover")
     }
     
 
@@ -76,6 +69,8 @@ class BaseTabBarViewController: UITabBarController {
         /// 更改 Tabbar的图片大小  top 和 bottom 一定要这只为相反数 否则 image大小会一直变化
         if title.isEmpty {
             vc.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0)
+        }else{
+            vc.tabBarItem.imageInsets = UIEdgeInsetsMake(-2, 0, 2, 0)
         }
         let baseNav = BaseNavgationController(rootViewController:vc)
         addChildViewController(baseNav)
