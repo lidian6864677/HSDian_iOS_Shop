@@ -10,7 +10,5 @@
 #define PrefixHeader_pch
 
 
-#define Dian "aaaaa"
-
 
 #endif /* PrefixHeader_pch */
