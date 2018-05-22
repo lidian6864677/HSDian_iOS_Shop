@@ -52,7 +52,7 @@ class BaseTabBarViewController: UITabBarController {
     }
     fileprivate func setChildVc(){
         prepareChildViewController(DLJobViewController(), title: "职位", normalImage: "TabBar0_new", selectedImage: "TabBar0_new_hover")
-        prepareChildViewController(PendingViewController(), title: "待办", normalImage: "TabBar1_new", selectedImage: "TabBar1_new_hover")
+        prepareChildViewController(PendingTabStripViewController(), title: "待办", normalImage: "TabBar1_new", selectedImage: "TabBar1_new_hover")
         
 //        prepareChildViewController(ChangeFontViewController(), title: "", normalImage: "TabBar4_new_hover", selectedImage: "TabBar4_new_hover")
         

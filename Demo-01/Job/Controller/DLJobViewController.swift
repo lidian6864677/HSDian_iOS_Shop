@@ -8,7 +8,6 @@
 
 import UIKit
 import Moya
-
 class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     
 //    var channels:[[String: Any]]  = []
@@ -27,7 +26,7 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
         getData()
         
     }
-    
+  
     
     func getData() {
 //        DouBanProvider.request(.channels) { (result) in

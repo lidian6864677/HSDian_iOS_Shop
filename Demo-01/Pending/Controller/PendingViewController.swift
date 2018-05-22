@@ -8,11 +8,9 @@
 
 import UIKit
 import SnapKit
-
-class PendingViewController: BaseViewController {
+import XLPagerTabStrip
+class PendingViewController: BaseViewController,IndicatorInfoProvider {
     private lazy var backBtn: UIButton          = UIButton()
-    
-    
     
     var labelNumber:Double = 0
     var result:UILabel!
@@ -130,6 +128,18 @@ class PendingViewController: BaseViewController {
         self.labelNumber = 0
         self.result.text = "0.0"
     }
+    
+    class MyEmbeddedViewController: UITableViewController, IndicatorInfoProvider {
+        
+        func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+            return IndicatorInfo(title: "My Child title")
+        }
+    }
+    public var itemInfo: IndicatorInfo = "全部"
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return itemInfo
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
