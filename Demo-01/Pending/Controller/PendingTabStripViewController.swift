@@ -12,6 +12,7 @@ import XLPagerTabStrip
 class PendingTabStripViewController: ButtonBarPagerTabStripViewController {
 
     override func viewDidLoad() {
+        self.navigationController?.navigationBar.isTranslucent = false 
         
         self.settings.style.selectedBarHeight = 3
         self.settings.style.selectedBarBackgroundColor = UIColor.clear
@@ -35,8 +36,8 @@ class PendingTabStripViewController: ButtonBarPagerTabStripViewController {
         }
     }
     func addButtonBarViewSetting() {
-        let Y:CGFloat = statusBarHeight + navigationBarHeight
-        self.buttonBarView.frame = CGRect(x: 0, y: Y, width: screenWidth-2, height: 45)
+//        let Y:CGFloat = statusBarHeight + navigationBarHeight
+        self.buttonBarView.frame = CGRect(x: 0, y: 0, width: screenWidth-2, height: 45)
         self.buttonBarView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         /// 选中条
         let selectview = UIView()
@@ -49,7 +50,7 @@ class PendingTabStripViewController: ButtonBarPagerTabStripViewController {
         }
         /// 分割线
         let lineView = UIView(frame: CGRect(x:0 , y: self.buttonBarView.frame.size.height-1, width: self.buttonBarView.frame.width, height: 1))
-        lineView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        lineView.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.9607843137, blue: 0.9607843137, alpha: 1)
         self.buttonBarView.addSubview(lineView)
         
     }

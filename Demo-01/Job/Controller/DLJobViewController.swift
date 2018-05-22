@@ -15,6 +15,18 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
                 "测试测试测试测试测试测试",
                 "123",
                 "Alex",
+                "测试测试测试测试测试测试",
+                "123",
+                "Alex",
+                "测试测试测试测试测试测试",
+                "123",
+                "Alex",
+                "测试测试测试测试测试测试",
+                "123",
+                "Alex",
+                "测试测试测试测试测试测试",
+                "123",
+                "Alex",
                 "@@@@@@"]
     var fontNames = ["MFTongXin_Noncommercial-Regular", "MFJinHei_Noncommercial-Regular", "MFZhiHei_Noncommercial-Regular", "Zapfino", "Gaspar Regular"]
     
@@ -97,8 +109,7 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
     lazy var tableView:UITableView = {
         
         let tableViewY:CGFloat = statusBarHeight + navigationBarHeight
-        let tab = tabBarHeight
-        var tableView = UITableView(frame: CGRect(x: 0, y:tableViewY , width: screenWidth, height: screenHeight - tableViewY - tabBarHeight), style: UITableViewStyle.grouped)
+        var tableView = UITableView(frame: CGRect(x: 0, y:0 , width: screenWidth, height: screenHeight - tableViewY - tabBarHeight), style: UITableViewStyle.grouped)
         tableView.delegate = self
         tableView.dataSource = self
         if #available(iOS 11.0, *) {
