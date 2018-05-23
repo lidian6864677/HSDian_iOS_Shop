@@ -37,7 +37,7 @@ class PendingTabStripViewController: ButtonBarPagerTabStripViewController {
     }
     func addButtonBarViewSetting() {
 //        let Y:CGFloat = statusBarHeight + navigationBarHeight
-        self.buttonBarView.frame = CGRect(x: 0, y: 0, width: screenWidth-2, height: 45)
+        self.buttonBarView.frame = CGRect(x: 0, y: 0, width: DLScreenWidth-2, height: 45)
         self.buttonBarView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         /// 选中条
         let selectview = UIView()

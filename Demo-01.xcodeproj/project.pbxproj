@@ -25,6 +25,9 @@
 		84277F8E20A48108001DA2F3 /* DLMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84277F8D20A48108001DA2F3 /* DLMeViewController.swift */; };
 		8434184D20B3EACC00661383 /* DLJobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434184C20B3EACC00661383 /* DLJobTableViewCell.swift */; };
 		8434184F20B3EDDD00661383 /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434184E20B3EDDD00661383 /* JobModel.swift */; };
+		8434185120B45AA700661383 /* DLJobTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434185020B45AA700661383 /* DLJobTableViewHeaderView.swift */; };
+		8434185420B5174300661383 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434185320B5174300661383 /* UIView+Extension.swift */; };
+		8434185620B51CDE00661383 /* DLJobNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434185520B51CDE00661383 /* DLJobNavView.swift */; };
 		8455725120A5DE9300213256 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455725020A5DE7A00213256 /* Const.swift */; };
 		8455725320A5DEAD00213256 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455725220A5DEAD00213256 /* BaseViewController.swift */; };
 		8455725B20A6A6F700213256 /* BaseNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455725A20A6A6F700213256 /* BaseNavgationController.swift */; };
@@ -81,6 +84,9 @@
 		84277F8D20A48108001DA2F3 /* DLMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLMeViewController.swift; sourceTree = "<group>"; };
 		8434184C20B3EACC00661383 /* DLJobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLJobTableViewCell.swift; sourceTree = "<group>"; };
 		8434184E20B3EDDD00661383 /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
+		8434185020B45AA700661383 /* DLJobTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLJobTableViewHeaderView.swift; sourceTree = "<group>"; };
+		8434185320B5174300661383 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		8434185520B51CDE00661383 /* DLJobNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLJobNavView.swift; sourceTree = "<group>"; };
 		8455725020A5DE7A00213256 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		8455725220A5DEAD00213256 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8455725A20A6A6F700213256 /* BaseNavgationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavgationController.swift; sourceTree = "<group>"; };
@@ -187,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				8434184C20B3EACC00661383 /* DLJobTableViewCell.swift */,
+				8434185020B45AA700661383 /* DLJobTableViewHeaderView.swift */,
+				8434185520B51CDE00661383 /* DLJobNavView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,9 +367,18 @@
 			path = "Demo-01UITests";
 			sourceTree = "<group>";
 		};
+		8434185220B516D500661383 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8434185320B5174300661383 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		84547CB920A485C3002353FE /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				8434185220B516D500661383 /* Extensions */,
 				84CD7DB820B01B96005A3B13 /* Network */,
 				8455724F20A5DE7A00213256 /* Manager */,
 				8455724E20A5DE7500213256 /* BaseViewController */,
@@ -622,10 +639,13 @@
 				8420B152209B2D7E003990EE /* PendingViewController.swift in Sources */,
 				841A88AD20AF13FB00EDCB06 /* MeViewModel.swift in Sources */,
 				84277F8E20A48108001DA2F3 /* DLMeViewController.swift in Sources */,
+				8434185120B45AA700661383 /* DLJobTableViewHeaderView.swift in Sources */,
+				8434185620B51CDE00661383 /* DLJobNavView.swift in Sources */,
 				84277F8C20A480FE001DA2F3 /* DLMessageViewController.swift in Sources */,
 				84E2D90420B30E350084C610 /* PendingTabStripViewController.swift in Sources */,
 				8455725320A5DEAD00213256 /* BaseViewController.swift in Sources */,
 				8455725B20A6A6F700213256 /* BaseNavgationController.swift in Sources */,
+				8434185420B5174300661383 /* UIView+Extension.swift in Sources */,
 				841A88A920AF13DF00EDCB06 /* PendingViewModel.swift in Sources */,
 				8420B150209B2D7E003990EE /* AppDelegate.swift in Sources */,
 				8434184F20B3EDDD00661383 /* JobModel.swift in Sources */,
