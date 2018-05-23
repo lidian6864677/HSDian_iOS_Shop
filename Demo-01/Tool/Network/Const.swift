@@ -12,6 +12,17 @@ import UIKit
 // MARK:  configure 配置
 let BASE_URL = "http://192.168.3.128"
 
+//{() -> UINavigationController in
+//    let window =
+//    if (_rootNavigationController == nil) {
+//        _rootNavigationController = (UINavigationController *)self.xyWindow.rootViewController;
+//    }
+//    return _rootNavigationController;
+//}()
+let DLWindow = UIApplication.shared.delegate?.window
+let DLGlobalNavigationController = DLWindow??.rootViewController?.navigationController
+//    [XYClient defaultClient].rootNavigationController
+
 
 
 // MARK: 适配高度

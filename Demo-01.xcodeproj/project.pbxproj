@@ -14,6 +14,7 @@
 		841A88AD20AF13FB00EDCB06 /* MeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A88AC20AF13FB00EDCB06 /* MeViewModel.swift */; };
 		841A88AF20B01AEC00EDCB06 /* Observable+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A88AE20B01AEB00EDCB06 /* Observable+ObjectMapper.swift */; };
 		841D09FA20AC680E0020D593 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D09F920AC680E0020D593 /* BaseTabBarViewController.swift */; };
+		841EB17C20B59200004A9F60 /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841EB17B20B59200004A9F60 /* JobDetailViewController.swift */; };
 		8420B150209B2D7E003990EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420B14F209B2D7E003990EE /* AppDelegate.swift */; };
 		8420B152209B2D7E003990EE /* PendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420B151209B2D7E003990EE /* PendingViewController.swift */; };
 		8420B155209B2D7E003990EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8420B153209B2D7E003990EE /* Main.storyboard */; };
@@ -66,6 +67,7 @@
 		841A88AC20AF13FB00EDCB06 /* MeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewModel.swift; sourceTree = "<group>"; };
 		841A88AE20B01AEB00EDCB06 /* Observable+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+ObjectMapper.swift"; sourceTree = "<group>"; };
 		841D09F920AC680E0020D593 /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
+		841EB17B20B59200004A9F60 /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
 		8420B14C209B2D7E003990EE /* Demo-01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo-01.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8420B14F209B2D7E003990EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8420B151209B2D7E003990EE /* PendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				84277F8920A47C83001DA2F3 /* DLJobViewController.swift */,
+				841EB17B20B59200004A9F60 /* JobDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -648,6 +651,7 @@
 				8434185420B5174300661383 /* UIView+Extension.swift in Sources */,
 				841A88A920AF13DF00EDCB06 /* PendingViewModel.swift in Sources */,
 				8420B150209B2D7E003990EE /* AppDelegate.swift in Sources */,
+				841EB17C20B59200004A9F60 /* JobDetailViewController.swift in Sources */,
 				8434184F20B3EDDD00661383 /* JobModel.swift in Sources */,
 				841A88A720AF139600EDCB06 /* DLJobViewModel.swift in Sources */,
 				841A88AB20AF13EE00EDCB06 /* MessageViewModel.swift in Sources */,

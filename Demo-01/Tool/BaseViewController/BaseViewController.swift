@@ -8,13 +8,28 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
-    
+class BaseViewController: UIViewController,UINavigationControllerDelegate {
+    private let HiddenNavigationBarViewControllersStringName:[String] = ["DLJobViewController"]
+    private var HiddenNavigationBarViewControllers: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.delegate = self
+        getClsName()
+        
+        
         
         // Do any additional setup after loading the view.
+    }
+    func getClsName(){
+        for vcName in HiddenNavigationBarViewControllersStringName {
+            let namespace = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
+            // 拼接类名的完整格式,即namespace.类名,vcName即控制器的类名
+            let clsName = "\(namespace).\(vcName)"
+            HiddenNavigationBarViewControllers.append(clsName)
+            
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -30,6 +45,17 @@ class BaseViewController: UIViewController {
         leftButton.setImage(UIImage(named: "back_image"), for: UIControlState.normal)
         leftButton.addTarget(self, action: #selector(clickedLeftNavigationItem), for: UIControlEvents.touchUpInside)
     }
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+//        let isShowNavPage = HiddenNavigationBarViewControllers.contains(viewController.classForCoder.description())
+        let isShowNavPage = HiddenNavigationBarViewControllers.contains("Demo-01.DLJobViewController")
+        self.navigationController?.setNavigationBarHidden(isShowNavPage, animated: true)
+//        self.navigationController?.setNavigationBarHidden(<#T##hidden: Bool##Bool#>, animated: <#T##Bool#>)
+//        self.navigationController?.isNavigationBarHidden = true
+        
+    }
+    
+    
+    
     
     /// 右侧Nav按钮 文字  类型
     ///

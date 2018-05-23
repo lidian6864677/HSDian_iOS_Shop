@@ -38,7 +38,7 @@ class DLJobNavView: UIView {
     
     var offsetY: CGFloat = 0.0 {
         didSet {
-            print(offsetY)
+//            print(offsetY)
             let alpha = offsetY / (DLStatusBarHeight + DLnavigationBarHeight)
             topNavView.alpha = alpha
         }

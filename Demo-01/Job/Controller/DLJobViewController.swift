@@ -98,7 +98,10 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        tableView.deselectRow(at: indexPath, animated: true)
+        let jobVc = JobDetailViewController()
+        self.navigationController?.pushViewController(jobVc, animated: true)
+//        DLGlobalNavigationController?.pushViewController(jobVc, animated: true)
     }
     
     
