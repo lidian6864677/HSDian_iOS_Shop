@@ -2,12 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/dian/Desktop/swiftDemo的副本/HSDian_iOS.xcodeproj">
+      location = "group:HSDian_iOS.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:HSDian_iOS.xcodeproj">
    </FileRef>
 </Workspace>
