@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "me_top_bg_image.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "timg.jpeg",
       "scale" : "2x"
     },
     {

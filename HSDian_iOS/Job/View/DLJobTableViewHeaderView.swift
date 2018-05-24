@@ -31,7 +31,7 @@ class DLJobTableViewHeaderView: UIView {
     lazy var bgImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
-        imageView.image = UIImage(named: "home_top_image")
+        imageView.image = UIImage(named: "home_top_image_01")
         return imageView
     }()
    

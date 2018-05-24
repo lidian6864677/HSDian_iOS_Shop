@@ -107,7 +107,7 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
     }()
     /// tableViewHeaderView
     lazy var tableHeaderView: DLJobTableViewHeaderView = {
-        let topView = DLJobTableViewHeaderView(frame: CGRect(x: 0, y: 0, width: DLScreenWidth, height: 200))
+        let topView = DLJobTableViewHeaderView(frame: CGRect(x: 0, y: 0, width: DLScreenWidth, height: 265*DLScreenRate))
         return topView
     }()
     /// job NavView

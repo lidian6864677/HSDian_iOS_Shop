@@ -38,8 +38,9 @@ class BaseViewController: UIViewController,UINavigationControllerDelegate {
         let leftButton:UIButton = UIButton(type: UIButtonType.custom)
         leftButton.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
         leftButton.contentHorizontalAlignment = .left
-        leftButton.setImage(UIImage(named: "back_image"), for: UIControlState.normal)
+        leftButton.setImage(UIImage(named: "back_image_black"), for: UIControlState.normal)
         leftButton.addTarget(self, action: #selector(clickedLeftNavigationItem), for: UIControlEvents.touchUpInside)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftButton)
     }
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         var isShowNavPage = HiddenNavigationBarViewControllers.contains(viewController.classForCoder.description())

@@ -14,6 +14,7 @@ class DLJobNavView: UIView {
         super.init(frame: frame)
         backgroundColor = UIColor.clear
         prepareView()
+        settingLayer()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -33,6 +34,14 @@ class DLJobNavView: UIView {
             make.bottom.equalTo(-10)
             make.height.equalTo(33)
         }
+    }
+    // 设置阴影
+    func settingLayer() {
+//        self.shadowImage = UIImage()
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 2, height: 2)
+        self.layer.shadowOpacity = 0.1
+        self.layer.shadowRadius = 4.0
     }
     
     // MARK: update
