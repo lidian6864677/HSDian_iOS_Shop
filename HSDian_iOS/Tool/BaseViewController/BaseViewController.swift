@@ -13,13 +13,9 @@ class BaseViewController: UIViewController,UINavigationControllerDelegate {
     private var HiddenNavigationBarViewControllers: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        getClsName()
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.delegate = self
-        getClsName()
-        
-        
-        
         // Do any additional setup after loading the view.
     }
     func getClsName(){
@@ -46,13 +42,12 @@ class BaseViewController: UIViewController,UINavigationControllerDelegate {
         leftButton.addTarget(self, action: #selector(clickedLeftNavigationItem), for: UIControlEvents.touchUpInside)
     }
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        let isShowNavPage = HiddenNavigationBarViewControllers.contains(viewController.classForCoder.description())
-//        let isShowNavPage = HiddenNavigationBarViewControllers.contains("HSDian_iOS.DLJobViewController")
-        self.navigationController?.navigationBar.isHidden = isShowNavPage
-//        self.navigationController?.setNavigationBarHidden(isShowNavPage, animated: true)
-//        self.navigationController?.setNavigationBarHidden(<#T##hidden: Bool##Bool#>, animated: <#T##Bool#>)
-//        self.navigationController?.isNavigationBarHidden = true
-        
+        var isShowNavPage = HiddenNavigationBarViewControllers.contains(viewController.classForCoder.description())
+        if navigationController.visibleViewController?.classForCoder.description() == BaseTabBarViewController.classForCoder().description() {
+            isShowNavPage = true
+        }
+//        self.navigationController?.navigationBar.isHidden = isShowNavPage
+        self.navigationController?.setNavigationBarHidden(isShowNavPage, animated: true)
     }
     
     

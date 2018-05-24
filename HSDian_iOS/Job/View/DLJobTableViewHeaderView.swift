@@ -18,7 +18,7 @@ class DLJobTableViewHeaderView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+    // MARK: LUIs
     private func prepareViews() {
         addSubview(bgImageView)
         bgImageView.snp.makeConstraints { (make) in
@@ -35,13 +35,5 @@ class DLJobTableViewHeaderView: UIView {
         return imageView
     }()
    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  
 }

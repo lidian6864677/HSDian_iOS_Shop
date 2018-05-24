@@ -1,4 +1,4 @@
-//
+	//
 //  DLJobViewController.swift
 //  HSDian_iOS
 //
@@ -15,20 +15,16 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
     private lazy var jobModelArray: [JobModel] = [JobModel](repeating: model, count: 15)
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.isHidden = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(self.tableView)
         self.view.addSubview(topNavView)
-        self.navigationItem.title = "refersh"
-        
-        self.setRightNavgationItemWithTitle(title: "Change")
         getData()
     }
   
-    
+    // MARK: GetData
     func getData() {
 //        DouBanProvider.request(.channels) { (result) in
 //            if case let .success(response) = result {
@@ -44,19 +40,7 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
 //
 //        }
     }
-    
-    
-    
-    
-    
-    
-    
-    override func clickRightNavgationItem() {
-        print("更改了文字")
-        getData()
-    }
-    
-    
+    // MARK: scrollViewDelegate
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         if scrollView.contentOffset.y < 0 {
@@ -64,11 +48,11 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
         }else if scrollView.contentOffset.y < (DLStatusBarHeight + DLnavigationBarHeight){
             self.topNavView.offsetY = offsetY
         }else{
-            
+            self.topNavView.offsetY = (DLStatusBarHeight + DLnavigationBarHeight)
         }
     }
     
-    
+    // MARK: tableViewDelegate&tableViewDatasource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return jobModelArray.count
     }
@@ -100,15 +84,10 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let jobVc = JobDetailViewController()
-        self.navigationController?.pushViewController(jobVc, animated: true)
-//        DLGlobalNavigationController?.pushViewController(jobVc, animated: true)
+        DLGlobalNavigationController.pushViewController(jobVc, animated: true)
     }
     
-    
-    func random(lower: Int = 0, _ upper: Int = Int.max) -> Int {
-        return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
-    }
-    
+    // MARK: GUIs
     lazy var tableView:UITableView = {
 //        let tableViewY:CGFloat = DLStatusBarHeight + DLnavigationBarHeight
         var tableView = UITableView(frame: CGRect(x: 0, y:0 , width: DLScreenWidth, height: DLScreenHeight - DLTabBarHeight), style: UITableViewStyle.grouped)

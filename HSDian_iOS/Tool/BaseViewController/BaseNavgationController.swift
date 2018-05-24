@@ -12,12 +12,18 @@ class BaseNavgationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.isNavigationBarHidden = true //上部的导航栏
-//        self.isToolbarHidden = true //底部的状态栏
-        self.navigationBar.barTintColor = #colorLiteral(red: 0.1298420429, green: 0.1298461258, blue: 0.1298439503, alpha: 1)
+        self.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.navigationBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)]
-        self.navigationBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)]
+        
+        /// 设置底部阴影
+        // 设置底部阴影
+        self.navigationBar.shadowImage = UIImage()
+        self.navigationBar.layer.shadowColor = UIColor.black.cgColor
+        self.navigationBar.layer.shadowOffset = CGSize(width: 2, height: 2)
+        self.navigationBar.layer.shadowOpacity = 0.1
+        self.navigationBar.layer.shadowRadius = 4.0
+        
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {

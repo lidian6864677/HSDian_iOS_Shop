@@ -16,7 +16,6 @@ class PendingTabStripViewController: ButtonBarPagerTabStripViewController {
         
         self.settings.style.selectedBarHeight = 3
         self.settings.style.selectedBarBackgroundColor = UIColor.clear
-//        self.settings.style.selectedBarVerticalAlignment = .bottom
         super.viewDidLoad()
         addButtonBarViewSetting()
         self.settings.style.buttonBarItemFont = .systemFont(ofSize: 13)
@@ -54,7 +53,7 @@ class PendingTabStripViewController: ButtonBarPagerTabStripViewController {
         self.buttonBarView.addSubview(lineView)
         
     }
-    
+    // MARK: pagerTab
     override public func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         
         let child_1 = PendingViewController()

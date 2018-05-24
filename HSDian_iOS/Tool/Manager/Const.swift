@@ -19,8 +19,18 @@ let BASE_URL = "http://192.168.3.128"
 //    }
 //    return _rootNavigationController;
 //}()
-let DLWindow = UIApplication.shared.delegate?.window
-let DLGlobalNavigationController = DLWindow??.rootViewController?.navigationController
+let DLWindow = (UIApplication.shared.delegate as! AppDelegate).window
+//{  () -> UIWindow in
+
+//    let rootVC = (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController
+//     return rootVC.window?.rootViewController
+    
+//    let appDelegate = UIApplication.shared.delegate?
+    
+//    return ((appDelegate?.window)!)!
+//}()
+//UIApplication.shared.delegate?.window
+let DLGlobalNavigationController = DLWindow?.rootViewController as! UINavigationController
 //    [XYClient defaultClient].rootNavigationController
 
 

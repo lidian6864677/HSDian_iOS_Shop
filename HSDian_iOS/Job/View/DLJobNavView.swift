@@ -19,7 +19,7 @@ class DLJobNavView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+    // MARK: LUIs
     func prepareView() {
         addSubview(topNavView)
         addSubview(searchButton)
@@ -31,23 +31,28 @@ class DLJobNavView: UIView {
             make.left.equalTo(20)
             make.right.equalTo(-20)
             make.bottom.equalTo(-10)
-            make.height.equalTo(28)
+            make.height.equalTo(33)
         }
     }
     
-    
+    // MARK: update
     var offsetY: CGFloat = 0.0 {
         didSet {
-//            print(offsetY)
             let alpha = offsetY / (DLStatusBarHeight + DLnavigationBarHeight)
             topNavView.alpha = alpha
+            if alpha <= 0.5 {
+                searchButton.setBackgroundImage(UIImage(named:"home_top_search_Image"), for: .normal)
+            }else{
+                searchButton.setBackgroundImage(UIImage(named:"home_top_search_picture"), for: .normal)
+            }
         }
     }
+    
     // MARK: GUIs
     /// nav背景
     lazy var topNavView: UIView = {
         let view = UIView()
-        view.backgroundColor = #colorLiteral(red: 0.1298420429, green: 0.1298461258, blue: 0.1298439503, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         view.alpha = 0
         return view
     }()
@@ -56,9 +61,8 @@ class DLJobNavView: UIView {
         let button = UIButton()
         button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
         button.setTitleColor(#colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1), for: .normal)
-        button.setBackgroundImage(UIImage(named: "home_top_search_Image"), for: .normal)
-        //        button.setBackgroundImage(UIImage(named: "home_top_search_Image"), for: .sel)
-        button.setTitle("🔍     搜索职位/公司", for: .normal)
+        button.setBackgroundImage(UIImage(named:"home_top_search_picture"), for: .normal)
+        button.setTitle("🔍   搜索职位/公司  ", for: .normal)
         button.contentHorizontalAlignment = .center
         return button
     }()

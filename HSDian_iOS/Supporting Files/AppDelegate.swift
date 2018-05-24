@@ -12,7 +12,15 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+  
+    
+//    var rootNavigationController: BaseNavgationController {
+//        get
+//        {
+////            root.navigationBar.isHidden = true
+//            return root
+//        }
+//    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -22,12 +30,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let tabBar = BaseTabBarViewController()
         self.window?.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        self.window?.rootViewController = tabBar
+//        self.rootNavigationController.viewControllers = @[self.tabBarVC];
+//        self.window.rootViewController = self.rootNavigationController;
+        rootNavigationController.viewControllers = [tabBar]
+        
+        self.window?.rootViewController = rootNavigationController
         
         
         // Override point for customization after application launch.
         return true
     }
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -50,6 +63,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    var rootNavigationController: BaseNavgationController = {
+        let rootNavigationController = BaseNavgationController()
+        rootNavigationController.setNavigationBarHidden(true, animated: true)
+        return rootNavigationController;
+    }()
 
 
 }
