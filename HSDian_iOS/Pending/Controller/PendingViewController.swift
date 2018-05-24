@@ -91,7 +91,7 @@ class PendingViewController: BaseViewController,IndicatorInfoProvider {
         
     }
     @objc func clickStartButton(){
-        print("startButton")
+        DLLog("startButton")
         if self.timer != nil {
             self.clickEndButton()
             return
@@ -115,7 +115,7 @@ class PendingViewController: BaseViewController,IndicatorInfoProvider {
     }
     
     @objc func clickEndButton(){
-        print("endButton")
+        DLLog("endButton")
         guard let timerForDistor = self.timer else {
             return
         }
@@ -124,7 +124,7 @@ class PendingViewController: BaseViewController,IndicatorInfoProvider {
     }
     
     @objc func clickResetButton(){
-        print("resetButton")
+        DLLog("resetButton")
         self.labelNumber = 0
         self.result.text = "0.0"
     }

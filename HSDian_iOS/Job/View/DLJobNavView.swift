@@ -31,13 +31,13 @@ class DLJobNavView: UIView {
         searchButton.snp.makeConstraints { (make) in
             make.left.equalTo(20)
             make.right.equalTo(-20)
-            make.bottom.equalTo(-10)
+            make.bottom.equalTo(-8)
             make.height.equalTo(33)
         }
     }
     // 设置阴影
     func settingLayer() {
-//        self.shadowImage = UIImage()
+        //        self.shadowImage = UIImage()
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOffset = CGSize(width: 2, height: 2)
         self.layer.shadowOpacity = 0.1
@@ -45,8 +45,21 @@ class DLJobNavView: UIView {
     }
     
     // MARK: update
+//    var hidden: Bool = false{
+//        didSet{
+//            self.isHidden = hidden
+//        }
+//    }
+    
     var offsetY: CGFloat = 0.0 {
         didSet {
+            DLLog(offsetY)
+//            if offsetY == 0 {
+//                self.isHidden =  true
+//            }else if offsetY > -20{
+//                self.isHidden =  false
+//            }
+            
             let alpha = offsetY / (DLStatusBarHeight + DLnavigationBarHeight)
             topNavView.alpha = alpha
             if alpha <= 0.5 {

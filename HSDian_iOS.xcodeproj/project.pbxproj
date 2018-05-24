@@ -32,6 +32,9 @@
 		8455725120A5DE9300213256 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455725020A5DE7A00213256 /* Const.swift */; };
 		8455725320A5DEAD00213256 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455725220A5DEAD00213256 /* BaseViewController.swift */; };
 		8455725B20A6A6F700213256 /* BaseNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455725A20A6A6F700213256 /* BaseNavgationController.swift */; };
+		84AB72E620B6F71500CB9DC2 /* CycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB72E520B6F6C200CB9DC2 /* CycleView.swift */; };
+		84AB72E720B6F71500CB9DC2 /* CellFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB72E320B6F6C200CB9DC2 /* CellFlowLayout.swift */; };
+		84AB72E820B6F71500CB9DC2 /* CycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB72E420B6F6C200CB9DC2 /* CycleCell.swift */; };
 		84E2D8FB20B303730084C610 /* DLJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84277F8920A47C83001DA2F3 /* DLJobViewController.swift */; };
 		84E2D90420B30E350084C610 /* PendingTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E2D90320B30E350084C610 /* PendingTabStripViewController.swift */; };
 		84E4BF0220B6C331000C08DD /* EnumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E4BF0120B6C331000C08DD /* EnumManager.swift */; };
@@ -93,6 +96,9 @@
 		8455725020A5DE7A00213256 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		8455725220A5DEAD00213256 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8455725A20A6A6F700213256 /* BaseNavgationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavgationController.swift; sourceTree = "<group>"; };
+		84AB72E320B6F6C200CB9DC2 /* CellFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFlowLayout.swift; sourceTree = "<group>"; };
+		84AB72E420B6F6C200CB9DC2 /* CycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleCell.swift; sourceTree = "<group>"; };
+		84AB72E520B6F6C200CB9DC2 /* CycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleView.swift; sourceTree = "<group>"; };
 		84E2D8FC20B3074E0084C610 /* PrefixHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.h; sourceTree = "<group>"; };
 		84E2D90320B30E350084C610 /* PendingTabStripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingTabStripViewController.swift; sourceTree = "<group>"; };
 		84E4BF0120B6C331000C08DD /* EnumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumManager.swift; sourceTree = "<group>"; };
@@ -349,6 +355,7 @@
 				841A889420AF125500EDCB06 /* Message */,
 				841A889220AF122F00EDCB06 /* Me */,
 				84547CB920A485C3002353FE /* Tool */,
+				84AB72E120B6F6AE00CB9DC2 /* Lib */,
 				8455725420A699F000213256 /* Supporting Files */,
 			);
 			path = HSDian_iOS;
@@ -421,6 +428,24 @@
 				84E2D8FC20B3074E0084C610 /* PrefixHeader.h */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84AB72E120B6F6AE00CB9DC2 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				84AB72E220B6F6C200CB9DC2 /* CycleView */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		84AB72E220B6F6C200CB9DC2 /* CycleView */ = {
+			isa = PBXGroup;
+			children = (
+				84AB72E520B6F6C200CB9DC2 /* CycleView.swift */,
+				84AB72E320B6F6C200CB9DC2 /* CellFlowLayout.swift */,
+				84AB72E420B6F6C200CB9DC2 /* CycleCell.swift */,
+			);
+			path = CycleView;
 			sourceTree = "<group>";
 		};
 		84CD7DB820B01B96005A3B13 /* Network */ = {
@@ -638,6 +663,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AB72E620B6F71500CB9DC2 /* CycleView.swift in Sources */,
+				84AB72E720B6F71500CB9DC2 /* CellFlowLayout.swift in Sources */,
+				84AB72E820B6F71500CB9DC2 /* CycleCell.swift in Sources */,
 				84E2D8FB20B303730084C610 /* DLJobViewController.swift in Sources */,
 				8434184D20B3EACC00661383 /* DLJobTableViewCell.swift in Sources */,
 				841A88AF20B01AEC00EDCB06 /* Observable+ObjectMapper.swift in Sources */,
