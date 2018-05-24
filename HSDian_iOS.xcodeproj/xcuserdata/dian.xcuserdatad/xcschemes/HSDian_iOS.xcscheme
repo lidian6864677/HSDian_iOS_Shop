@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9C7A7927C9B03C229F1806401DDCE917"
-               BuildableName = "XLPagerTabStrip.framework"
-               BlueprintName = "XLPagerTabStrip"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "8420B14B209B2D7E003990EE"
+               BuildableName = "HSDian_iOS.app"
+               BlueprintName = "HSDian_iOS"
+               ReferencedContainer = "container:HSDian_iOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -30,6 +30,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8420B14B209B2D7E003990EE"
+            BuildableName = "HSDian_iOS.app"
+            BlueprintName = "HSDian_iOS"
+            ReferencedContainer = "container:HSDian_iOS.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -44,15 +53,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9C7A7927C9B03C229F1806401DDCE917"
-            BuildableName = "XLPagerTabStrip.framework"
-            BlueprintName = "XLPagerTabStrip"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "8420B14B209B2D7E003990EE"
+            BuildableName = "HSDian_iOS.app"
+            BlueprintName = "HSDian_iOS"
+            ReferencedContainer = "container:HSDian_iOS.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -62,6 +72,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8420B14B209B2D7E003990EE"
+            BuildableName = "HSDian_iOS.app"
+            BlueprintName = "HSDian_iOS"
+            ReferencedContainer = "container:HSDian_iOS.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

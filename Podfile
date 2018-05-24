@@ -2,11 +2,11 @@
 # platform :ios, '9.0'
 
 # My other pods
-#abstract_target 'Demo-01' do
+#abstract_target 'HSDian_iOS' do
 #    pod 'SnapKit'
 
     # Has its own copy of ShowsKit + ShowWebAuth
-    target 'Demo-01' do
+    target 'HSDian_iOS' do
 #        pod 'ShowWebAuth'
         use_frameworks!
         pod 'SnapKit'
