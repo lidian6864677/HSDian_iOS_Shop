@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController,UINavigationControllerDelegate {
+class BaseViewController: UIViewController,UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     private let HiddenNavigationBarViewControllersStringName:[String] = ["DLJobViewController"]
     private var HiddenNavigationBarViewControllers: [String] = []
     override func viewDidLoad() {
@@ -24,7 +24,6 @@ class BaseViewController: UIViewController,UINavigationControllerDelegate {
             // 拼接类名的完整格式,即namespace.类名,vcName即控制器的类名
             let clsName = "\(namespace).\(vcName)"
             HiddenNavigationBarViewControllers.append(clsName)
-            
         }
     }
     
@@ -41,28 +40,28 @@ class BaseViewController: UIViewController,UINavigationControllerDelegate {
         leftButton.setImage(UIImage(named: "back_image_black"), for: UIControlState.normal)
         leftButton.addTarget(self, action: #selector(clickedLeftNavigationItem), for: UIControlEvents.touchUpInside)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftButton)
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
+  
+    
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         var isShowNavPage = HiddenNavigationBarViewControllers.contains(viewController.classForCoder.description())
         if navigationController.visibleViewController?.classForCoder.description() == BaseTabBarViewController.classForCoder().description() {
             isShowNavPage = true
         }
-//        self.navigationController?.navigationBar.isHidden = isShowNavPage
+        //        self.navigationController?.navigationBar.isHidden = isShowNavPage
         self.navigationController?.setNavigationBarHidden(isShowNavPage, animated: true)
     }
     
     
     
-    
     /// 右侧Nav按钮 文字  类型
-    ///
     /// - Parameter title: 名字
     func setRightNavgationItemWithTitle(title:String){
         self.setRightNavgationItem(title: title, image: nil)
     }
     
     /// 右侧Nav按钮 图片 类型
-    ///
     /// - Parameter image: image
     func setRightNavgationItemWithImage(image:UIImage){
         self.setRightNavgationItem(title: nil, image: image)
@@ -94,17 +93,18 @@ class BaseViewController: UIViewController,UINavigationControllerDelegate {
             self.navigationController?.popViewController(animated: true)
         }
     }
-
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
+
+//MARK: UIGestureRecognizerDelegate
+extension BaseViewController {
+    //是否允许手势
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if gestureRecognizer == self.navigationController?.interactivePopGestureRecognizer{
+            return self.navigationController!.viewControllers.count > 1
+        }
+        return true
+    }
+}
+
 
