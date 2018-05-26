@@ -65,6 +65,7 @@ class DLJobNavView: UIView {
         }
         searchButton.setTitle("", for: .normal)
         topNavView.alpha = 1
+        sizeToFitTheButton(button: cityButton, image: cityButton.imageView?.image, title: cityButton.titleLabel?.text ?? "")
     }
     // MARK: LUIs
     private func prepareViewCanEdit(){
@@ -111,6 +112,16 @@ class DLJobNavView: UIView {
         }
     }
     
+    func sizeToFitTheButton(button: UIButton, image: UIImage?, title: String) {
+        let imageSize = image?.size ?? CGSize()
+        let titleFont = button.titleLabel?.font
+        let titleSize = title.size(withAttributes: [NSAttributedStringKey.font: titleFont!])
+        let spacing:CGFloat = 3.0
+        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: -(imageSize.width * 2 + spacing), bottom: 0, right: 0)
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -(titleSize.width * 2 + spacing))
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+    }
+    
     // MARK: GUIs
     /// nav背景
     private lazy var topNavView: UIView = {
@@ -146,13 +157,7 @@ class DLJobNavView: UIView {
         btn.setImage(image, for: .normal)
         btn.setTitle(" 北京", for: .normal)
         btn.setTitleColor(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1), for: .normal)
-        let imageSize = image?.size ?? CGSize()
-        let titleFont = btn.titleLabel?.font!
-        let title = btn.titleLabel?.text ?? ""
-        let titleSize = title.size(withAttributes: [NSAttributedStringKey.font: titleFont!])
-        let spacing:CGFloat = 0.0
-        btn.titleEdgeInsets = UIEdgeInsets(top: 0, left: -(imageSize.width * 2 + spacing), bottom: 0, right: 0)
-        btn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -(titleSize.width * 2 + spacing))
+        btn.addTarget(self, action: #selector(clickCityBtn), for: .touchUpInside)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         btn.addTarget(self, action: #selector(clickCityBtn), for: .touchUpInside)
         return btn
@@ -177,6 +182,7 @@ extension DLJobNavView {
         vc.callback = { (selectName:String) in
             DLLog(selectName)
             self.cityButton.setTitle(" \(selectName)", for: .normal)
+            self.sizeToFitTheButton(button: self.cityButton, image: self.cityButton.imageView?.image, title: self.cityButton.titleLabel?.text ?? "")
         }
         DLGlobalNavigationController.pushViewController(vc, animated: true)
     }
