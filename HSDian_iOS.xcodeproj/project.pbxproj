@@ -13,8 +13,13 @@
 		841A88AB20AF13EE00EDCB06 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A88AA20AF13EE00EDCB06 /* MessageViewModel.swift */; };
 		841A88AD20AF13FB00EDCB06 /* MeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A88AC20AF13FB00EDCB06 /* MeViewModel.swift */; };
 		841A88AF20B01AEC00EDCB06 /* Observable+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A88AE20B01AEB00EDCB06 /* Observable+ObjectMapper.swift */; };
+		841D002620B91187002BBD06 /* CitySelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D002520B91187002BBD06 /* CitySelectorViewController.swift */; };
+		841D002820B9123D002BBD06 /* CitySeletorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D002720B9123D002BBD06 /* CitySeletorTableViewCell.swift */; };
+		841D002D20B91D3A002BBD06 /* CitySelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D002C20B91D3A002BBD06 /* CitySelectorViewModel.swift */; };
+		841D002F20B92FE1002BBD06 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D002E20B92FE1002BBD06 /* UIButton+Extension.swift */; };
 		841D09FA20AC680E0020D593 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D09F920AC680E0020D593 /* BaseTabBarViewController.swift */; };
 		841EB17C20B59200004A9F60 /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841EB17B20B59200004A9F60 /* JobDetailViewController.swift */; };
+		841F3D6720B96114009CB82D /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F3D6620B96114009CB82D /* Client.swift */; };
 		8420B150209B2D7E003990EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420B14F209B2D7E003990EE /* AppDelegate.swift */; };
 		8420B152209B2D7E003990EE /* PendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420B151209B2D7E003990EE /* PendingViewController.swift */; };
 		8420B155209B2D7E003990EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8420B153209B2D7E003990EE /* Main.storyboard */; };
@@ -32,6 +37,11 @@
 		8455725120A5DE9300213256 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455725020A5DE7A00213256 /* Const.swift */; };
 		8455725320A5DEAD00213256 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455725220A5DEAD00213256 /* BaseViewController.swift */; };
 		8455725B20A6A6F700213256 /* BaseNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455725A20A6A6F700213256 /* BaseNavgationController.swift */; };
+		84A3095320B93AB40020EA8E /* JobSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3095220B93AB40020EA8E /* JobSearchViewController.swift */; };
+		84A3095520B9402E0020EA8E /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3095420B9402E0020EA8E /* ResultTableViewController.swift */; };
+		84A3095720B945360020EA8E /* String+ChangePiYinExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3095620B945360020EA8E /* String+ChangePiYinExtension.swift */; };
+		84A3095820B94B4C0020EA8E /* Cities_All.plist in Resources */ = {isa = PBXBuildFile; fileRef = 841D002A20B9134C002BBD06 /* Cities_All.plist */; };
+		84A3095920B94B4C0020EA8E /* Cities_Hot.plist in Resources */ = {isa = PBXBuildFile; fileRef = 841D002B20B9134C002BBD06 /* Cities_Hot.plist */; };
 		84AB72E620B6F71500CB9DC2 /* CycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB72E520B6F6C200CB9DC2 /* CycleView.swift */; };
 		84AB72E720B6F71500CB9DC2 /* CellFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB72E320B6F6C200CB9DC2 /* CellFlowLayout.swift */; };
 		84AB72E820B6F71500CB9DC2 /* CycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB72E420B6F6C200CB9DC2 /* CycleCell.swift */; };
@@ -70,8 +80,15 @@
 		841A88AA20AF13EE00EDCB06 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		841A88AC20AF13FB00EDCB06 /* MeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewModel.swift; sourceTree = "<group>"; };
 		841A88AE20B01AEB00EDCB06 /* Observable+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+ObjectMapper.swift"; sourceTree = "<group>"; };
+		841D002520B91187002BBD06 /* CitySelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectorViewController.swift; sourceTree = "<group>"; };
+		841D002720B9123D002BBD06 /* CitySeletorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySeletorTableViewCell.swift; sourceTree = "<group>"; };
+		841D002A20B9134C002BBD06 /* Cities_All.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Cities_All.plist; sourceTree = "<group>"; };
+		841D002B20B9134C002BBD06 /* Cities_Hot.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Cities_Hot.plist; sourceTree = "<group>"; };
+		841D002C20B91D3A002BBD06 /* CitySelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectorViewModel.swift; sourceTree = "<group>"; };
+		841D002E20B92FE1002BBD06 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		841D09F920AC680E0020D593 /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
 		841EB17B20B59200004A9F60 /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
+		841F3D6620B96114009CB82D /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		8420B14C209B2D7E003990EE /* HSDian_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSDian_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8420B14F209B2D7E003990EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8420B151209B2D7E003990EE /* PendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +113,9 @@
 		8455725020A5DE7A00213256 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		8455725220A5DEAD00213256 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8455725A20A6A6F700213256 /* BaseNavgationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavgationController.swift; sourceTree = "<group>"; };
+		84A3095220B93AB40020EA8E /* JobSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchViewController.swift; sourceTree = "<group>"; };
+		84A3095420B9402E0020EA8E /* ResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
+		84A3095620B945360020EA8E /* String+ChangePiYinExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ChangePiYinExtension.swift"; sourceTree = "<group>"; };
 		84AB72E320B6F6C200CB9DC2 /* CellFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFlowLayout.swift; sourceTree = "<group>"; };
 		84AB72E420B6F6C200CB9DC2 /* CycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleCell.swift; sourceTree = "<group>"; };
 		84AB72E520B6F6C200CB9DC2 /* CycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleView.swift; sourceTree = "<group>"; };
@@ -202,9 +222,10 @@
 		841A889620AF128E00EDCB06 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8434184C20B3EACC00661383 /* DLJobTableViewCell.swift */,
 				8434185020B45AA700661383 /* DLJobTableViewHeaderView.swift */,
 				8434185520B51CDE00661383 /* DLJobNavView.swift */,
+				8434184C20B3EACC00661383 /* DLJobTableViewCell.swift */,
+				841D002720B9123D002BBD06 /* CitySeletorTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				841A88A620AF139600EDCB06 /* DLJobViewModel.swift */,
+				841D002C20B91D3A002BBD06 /* CitySelectorViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -222,6 +244,9 @@
 			children = (
 				84277F8920A47C83001DA2F3 /* DLJobViewController.swift */,
 				841EB17B20B59200004A9F60 /* JobDetailViewController.swift */,
+				84A3095220B93AB40020EA8E /* JobSearchViewController.swift */,
+				841D002520B91187002BBD06 /* CitySelectorViewController.swift */,
+				84A3095420B9402E0020EA8E /* ResultTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -325,6 +350,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		841D002920B91307002BBD06 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				841D002A20B9134C002BBD06 /* Cities_All.plist */,
+				841D002B20B9134C002BBD06 /* Cities_Hot.plist */,
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
 		8420B143209B2D7E003990EE = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +417,8 @@
 			isa = PBXGroup;
 			children = (
 				8434185320B5174300661383 /* UIView+Extension.swift */,
+				841D002E20B92FE1002BBD06 /* UIButton+Extension.swift */,
+				84A3095620B945360020EA8E /* String+ChangePiYinExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -412,6 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				8455725020A5DE7A00213256 /* Const.swift */,
+				841F3D6620B96114009CB82D /* Client.swift */,
 				84E4BF0120B6C331000C08DD /* EnumManager.swift */,
 			);
 			path = Manager;
@@ -433,6 +470,7 @@
 		84AB72E120B6F6AE00CB9DC2 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				841D002920B91307002BBD06 /* Plist */,
 				84AB72E220B6F6C200CB9DC2 /* CycleView */,
 			);
 			path = Lib;
@@ -566,6 +604,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A3095820B94B4C0020EA8E /* Cities_All.plist in Resources */,
+				84A3095920B94B4C0020EA8E /* Cities_Hot.plist in Resources */,
 				8420B15A209B2D7E003990EE /* LaunchScreen.storyboard in Resources */,
 				8420B157209B2D7E003990EE /* Assets.xcassets in Resources */,
 				8420B155209B2D7E003990EE /* Main.storyboard in Resources */,
@@ -667,12 +707,18 @@
 				84AB72E720B6F71500CB9DC2 /* CellFlowLayout.swift in Sources */,
 				84AB72E820B6F71500CB9DC2 /* CycleCell.swift in Sources */,
 				84E2D8FB20B303730084C610 /* DLJobViewController.swift in Sources */,
+				841D002D20B91D3A002BBD06 /* CitySelectorViewModel.swift in Sources */,
+				841D002620B91187002BBD06 /* CitySelectorViewController.swift in Sources */,
 				8434184D20B3EACC00661383 /* DLJobTableViewCell.swift in Sources */,
+				84A3095520B9402E0020EA8E /* ResultTableViewController.swift in Sources */,
 				841A88AF20B01AEC00EDCB06 /* Observable+ObjectMapper.swift in Sources */,
 				8455725120A5DE9300213256 /* Const.swift in Sources */,
 				8420B152209B2D7E003990EE /* PendingViewController.swift in Sources */,
+				841D002F20B92FE1002BBD06 /* UIButton+Extension.swift in Sources */,
+				841D002820B9123D002BBD06 /* CitySeletorTableViewCell.swift in Sources */,
 				841A88AD20AF13FB00EDCB06 /* MeViewModel.swift in Sources */,
 				84277F8E20A48108001DA2F3 /* DLMeViewController.swift in Sources */,
+				84A3095320B93AB40020EA8E /* JobSearchViewController.swift in Sources */,
 				8434185120B45AA700661383 /* DLJobTableViewHeaderView.swift in Sources */,
 				8434185620B51CDE00661383 /* DLJobNavView.swift in Sources */,
 				84277F8C20A480FE001DA2F3 /* DLMessageViewController.swift in Sources */,
@@ -683,10 +729,12 @@
 				841A88A920AF13DF00EDCB06 /* PendingViewModel.swift in Sources */,
 				8420B150209B2D7E003990EE /* AppDelegate.swift in Sources */,
 				84E4BF0220B6C331000C08DD /* EnumManager.swift in Sources */,
+				841F3D6720B96114009CB82D /* Client.swift in Sources */,
 				841EB17C20B59200004A9F60 /* JobDetailViewController.swift in Sources */,
 				8434184F20B3EDDD00661383 /* JobModel.swift in Sources */,
 				841A88A720AF139600EDCB06 /* DLJobViewModel.swift in Sources */,
 				841A88AB20AF13EE00EDCB06 /* MessageViewModel.swift in Sources */,
+				84A3095720B945360020EA8E /* String+ChangePiYinExtension.swift in Sources */,
 				841D09FA20AC680E0020D593 /* BaseTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

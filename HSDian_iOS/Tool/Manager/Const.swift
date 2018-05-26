@@ -28,7 +28,7 @@ let DLnavigationBarHeight = { () -> CGFloat in          /// Navgation高度
 }()
 let DLNavHeight : CGFloat = DLStatusBarHeight + DLnavigationBarHeight  /// 顶部栏的高度
 //tableView,collectionView,scrollView的frame
-let KUIDefaultFrame : CGRect = CGRect(x: 0, y: DLNavHeight, width: DLScreenWidth, height: DLScreenHeight - DLNavHeight)
+let KUIDefaultFrame : CGRect = CGRect(x: 0, y: 0, width: DLScreenWidth, height: DLScreenHeight - DLNavHeight)
 
 
 

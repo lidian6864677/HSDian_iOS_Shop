@@ -70,7 +70,7 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
     }()
     /// job NavView
     lazy var topNavView: DLJobNavView = {
-        let topView = DLJobNavView(frame: CGRect(x: 0, y: 0, width:DLScreenWidth, height: DLStatusBarHeight+DLnavigationBarHeight))
+        let topView = DLJobNavView(frame: CGRect(x: 0, y: 0, width:DLScreenWidth, height: DLStatusBarHeight+DLnavigationBarHeight), canEdit: false)
         return topView
     }()
     
@@ -142,7 +142,7 @@ extension DLJobViewController {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:  DLJobTableViewCell = tableView.dequeueReusableCell(withIdentifier: DLJobTableViewCellIdentifier, for: indexPath) as! DLJobTableViewCell
-        cell .updateJobModel(jobModel: nil)
+        cell.updateJobModel(jobModel: nil)
         return cell
     }
     
