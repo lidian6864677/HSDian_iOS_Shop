@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9C7A7927C9B03C229F1806401DDCE917'
-               BlueprintName = 'XLPagerTabStrip'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'XLPagerTabStrip.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "99C3584174DFF0E7DA8DBC488586717D"
+               BlueprintName = "XLPagerTabStrip"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "XLPagerTabStrip.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CycleCell: UICollectionViewCell {
     
@@ -24,9 +25,9 @@ class CycleCell: UICollectionViewCell {
     //FIXME: 本地和网络下载走的不同路径
     var imageURLString : String? {
         didSet{
-            if (imageURLString?.hasPrefix("http"))! {
+            if (imageURLString?.hasPrefix("https"))! {
                 //网络图片:使用SDWebImage下载即可
-                
+                imageView.kf.setImage(with: ImageResource.init(downloadURL: URL.init(string: imageURLString ?? "")!))
             } else {
                 //本地图片
                 imageView.image = UIImage(named: imageURLString!)

@@ -34,6 +34,10 @@
 		8434185120B45AA700661383 /* DLJobTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434185020B45AA700661383 /* DLJobTableViewHeaderView.swift */; };
 		8434185420B5174300661383 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434185320B5174300661383 /* UIView+Extension.swift */; };
 		8434185620B51CDE00661383 /* DLJobNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434185520B51CDE00661383 /* DLJobNavView.swift */; };
+		8436897620BA4E850028B5EF /* NetworkJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436897520BA4E850028B5EF /* NetworkJob.swift */; };
+		8436897820BA6AB50028B5EF /* DLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436897720BA6AB50028B5EF /* DLRequest.swift */; };
+		8436897A20BA6B500028B5EF /* DLToModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436897920BA6B4F0028B5EF /* DLToModelExtension.swift */; };
+		8436897C20BA724B0028B5EF /* NetworkHomeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436897B20BA724B0028B5EF /* NetworkHomeApi.swift */; };
 		8455725120A5DE9300213256 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455725020A5DE7A00213256 /* Const.swift */; };
 		8455725320A5DEAD00213256 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455725220A5DEAD00213256 /* BaseViewController.swift */; };
 		8455725B20A6A6F700213256 /* BaseNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455725A20A6A6F700213256 /* BaseNavgationController.swift */; };
@@ -110,6 +114,10 @@
 		8434185020B45AA700661383 /* DLJobTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLJobTableViewHeaderView.swift; sourceTree = "<group>"; };
 		8434185320B5174300661383 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		8434185520B51CDE00661383 /* DLJobNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLJobNavView.swift; sourceTree = "<group>"; };
+		8436897520BA4E850028B5EF /* NetworkJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkJob.swift; sourceTree = "<group>"; };
+		8436897720BA6AB50028B5EF /* DLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLRequest.swift; sourceTree = "<group>"; };
+		8436897920BA6B4F0028B5EF /* DLToModelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLToModelExtension.swift; sourceTree = "<group>"; };
+		8436897B20BA724B0028B5EF /* NetworkHomeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHomeApi.swift; sourceTree = "<group>"; };
 		8455725020A5DE7A00213256 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		8455725220A5DEAD00213256 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8455725A20A6A6F700213256 /* BaseNavgationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavgationController.swift; sourceTree = "<group>"; };
@@ -323,6 +331,9 @@
 		841A88A220AF12AA00EDCB06 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8436897520BA4E850028B5EF /* NetworkJob.swift */,
+				8436897720BA6AB50028B5EF /* DLRequest.swift */,
+				8436897920BA6B4F0028B5EF /* DLToModelExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -489,6 +500,7 @@
 		84CD7DB820B01B96005A3B13 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				8436897B20BA724B0028B5EF /* NetworkHomeApi.swift */,
 				841A88AE20B01AEB00EDCB06 /* Observable+ObjectMapper.swift */,
 			);
 			path = Network;
@@ -655,6 +667,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HSDian_iOS/Pods-HSDian_iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -667,6 +680,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -692,7 +706,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -722,8 +736,10 @@
 				841A88AD20AF13FB00EDCB06 /* MeViewModel.swift in Sources */,
 				84277F8E20A48108001DA2F3 /* DLMeViewController.swift in Sources */,
 				84A3095320B93AB40020EA8E /* JobSearchViewController.swift in Sources */,
+				8436897A20BA6B500028B5EF /* DLToModelExtension.swift in Sources */,
 				8434185120B45AA700661383 /* DLJobTableViewHeaderView.swift in Sources */,
 				8434185620B51CDE00661383 /* DLJobNavView.swift in Sources */,
+				8436897C20BA724B0028B5EF /* NetworkHomeApi.swift in Sources */,
 				84277F8C20A480FE001DA2F3 /* DLMessageViewController.swift in Sources */,
 				84E2D90420B30E350084C610 /* PendingTabStripViewController.swift in Sources */,
 				8455725320A5DEAD00213256 /* BaseViewController.swift in Sources */,
@@ -734,9 +750,11 @@
 				84E4BF0220B6C331000C08DD /* EnumManager.swift in Sources */,
 				841F3D6720B96114009CB82D /* Client.swift in Sources */,
 				841EB17C20B59200004A9F60 /* JobDetailViewController.swift in Sources */,
+				8436897620BA4E850028B5EF /* NetworkJob.swift in Sources */,
 				8434184F20B3EDDD00661383 /* JobModel.swift in Sources */,
 				841A88A720AF139600EDCB06 /* DLJobViewModel.swift in Sources */,
 				841A88AB20AF13EE00EDCB06 /* MessageViewModel.swift in Sources */,
+				8436897820BA6AB50028B5EF /* DLRequest.swift in Sources */,
 				84A3095720B945360020EA8E /* String+ChangePiYinExtension.swift in Sources */,
 				841D09FA20AC680E0020D593 /* BaseTabBarViewController.swift in Sources */,
 			);

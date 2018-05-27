@@ -16,4 +16,23 @@ class JobModel: NSObject {
     var settlement: String?  /// 结算方式
     var companyIcon: String? /// 公司 logo
     var companyName: String? /// 工作单位
+    
+    override convenience init() {
+        self.init(info:nil)
+    }
+    init(info: [String: Any]?) {
+        super.init()
+        toMoel(info: info  ??  [:])
+    }
+    
+    func toMoel(info:[String: Any]) {
+        self.jobName = info["userId"] as? String
+        self.address = info["password"] as? String
+        self.time = info["phone"] as? String
+        self.money = info["userId"] as? String
+        self.settlement = info["userId"] as? String
+        self.companyIcon = info["userId"] as? String
+        self.companyName = info["userId"] as? String
+        
+    }
 }
