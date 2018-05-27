@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import AMapFoundationKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -36,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window?.rootViewController = rootNavigationController
         
-        
+        AMapServices.shared().apiKey = AMapAppKey
         // Override point for customization after application launch.
         return true
     }

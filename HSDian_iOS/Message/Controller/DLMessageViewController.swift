@@ -8,13 +8,44 @@
 
 import UIKit
 
-class DLMessageViewController: BaseViewController {
+class DLMessageViewController: BaseViewController, MAMapViewDelegate, AMapSearchDelegate {
+    
+    
+    var mapView: MAMapView!
+    var search: AMapSearchAPI!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        self.navigationItem.title = "地图显示"
         
-        // Do any additional setup after loading the view.
+        AMapServices.shared().apiKey = AMapAppKey
+        initMapView()
+        initSearch()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        mapView.isShowsUserLocation = true
+        mapView.userTrackingMode = MAUserTrackingMode.follow
+    }
+    
+    
+    func initMapView() {
+        
+        mapView = MAMapView(frame: self.view.bounds)
+        mapView.delegate = self
+        self.view.addSubview(mapView!)
+    }
+    
+    func initSearch() {
+        //        AMap
+        search = AMapSearchAPI()
+        search.delegate = self
+    }
+    
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

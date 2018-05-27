@@ -20,7 +20,11 @@
         pod 'XLPagerTabStrip'
 #        pod 'SwiftyJSON'
 #        pod 'Moya', '~> 8.0.0'
-
+        pod 'AMapLocation'
+#        pod 'AMap3DMap'
+            #3D地图SDK
+        pod'AMap2DMap' #2D地图SDK (2D和3D不能同时使用)
+        pod 'AMapSearch'
 
     end
 

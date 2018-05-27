@@ -8,7 +8,12 @@
 import Foundation
 import UIKit
 // MARK:  configure 配置
-let BASE_URL = "http://192.168.3.128"
+let BASE_URL_Test = "47.104.192.159:8888"
+let AMapAppKey = "2dcc3116d7e74561305f58a797a597e5"
+
+
+
+
 
 // MARK:  界面 window && Navgation
 let DLWindow = (UIApplication.shared.delegate as! AppDelegate).window   /// window
