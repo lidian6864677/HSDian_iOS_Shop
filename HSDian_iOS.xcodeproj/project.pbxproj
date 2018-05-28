@@ -20,6 +20,9 @@
 		841D09FA20AC680E0020D593 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D09F920AC680E0020D593 /* BaseTabBarViewController.swift */; };
 		841EB17C20B59200004A9F60 /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841EB17B20B59200004A9F60 /* JobDetailViewController.swift */; };
 		841F3D6720B96114009CB82D /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F3D6620B96114009CB82D /* Client.swift */; };
+		841F57AB20BC30AC00B93E4D /* Response+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F57A920BC2A9E00B93E4D /* Response+ObjectMapper.swift */; };
+		841F57AC20BC30AC00B93E4D /* ObservableType+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F57A820BC2A9E00B93E4D /* ObservableType+ObjectMapper.swift */; };
+		841F57AD20BC30AC00B93E4D /* Single+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F57AA20BC2A9E00B93E4D /* Single+ObjectMapper.swift */; };
 		8420B150209B2D7E003990EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420B14F209B2D7E003990EE /* AppDelegate.swift */; };
 		8420B152209B2D7E003990EE /* PendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420B151209B2D7E003990EE /* PendingViewController.swift */; };
 		8420B155209B2D7E003990EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8420B153209B2D7E003990EE /* Main.storyboard */; };
@@ -93,6 +96,9 @@
 		841D09F920AC680E0020D593 /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
 		841EB17B20B59200004A9F60 /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
 		841F3D6620B96114009CB82D /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		841F57A820BC2A9E00B93E4D /* ObservableType+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+ObjectMapper.swift"; sourceTree = "<group>"; };
+		841F57A920BC2A9E00B93E4D /* Response+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response+ObjectMapper.swift"; sourceTree = "<group>"; };
+		841F57AA20BC2A9E00B93E4D /* Single+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Single+ObjectMapper.swift"; sourceTree = "<group>"; };
 		8420B14C209B2D7E003990EE /* HSDian_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSDian_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8420B14F209B2D7E003990EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8420B151209B2D7E003990EE /* PendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingViewController.swift; sourceTree = "<group>"; };
@@ -370,6 +376,16 @@
 			path = Plist;
 			sourceTree = "<group>";
 		};
+		841F57A720BC2A9E00B93E4D /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				841F57A920BC2A9E00B93E4D /* Response+ObjectMapper.swift */,
+				841F57A820BC2A9E00B93E4D /* ObservableType+ObjectMapper.swift */,
+				841F57AA20BC2A9E00B93E4D /* Single+ObjectMapper.swift */,
+			);
+			path = RxSwift;
+			sourceTree = "<group>";
+		};
 		8420B143209B2D7E003990EE = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +497,7 @@
 		84AB72E120B6F6AE00CB9DC2 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				841F57A720BC2A9E00B93E4D /* RxSwift */,
 				841D002920B91307002BBD06 /* Plist */,
 				84AB72E220B6F6C200CB9DC2 /* CycleView */,
 			);
@@ -720,6 +737,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841F57AB20BC30AC00B93E4D /* Response+ObjectMapper.swift in Sources */,
+				841F57AC20BC30AC00B93E4D /* ObservableType+ObjectMapper.swift in Sources */,
+				841F57AD20BC30AC00B93E4D /* Single+ObjectMapper.swift in Sources */,
 				84AB72E620B6F71500CB9DC2 /* CycleView.swift in Sources */,
 				84AB72E720B6F71500CB9DC2 /* CellFlowLayout.swift in Sources */,
 				84AB72E820B6F71500CB9DC2 /* CycleCell.swift in Sources */,

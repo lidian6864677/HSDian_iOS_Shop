@@ -11,11 +11,14 @@ import Moya
 import SwiftyJSON
 import RxSwift
 import RxCocoa
+import ObjectMapper
 private let DLJobTableViewCellIdentifier = "DLJobTableViewCell_Identifier"
 class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, CycleViewDelegate {
-    let model  = JobModel()
+//    let model = JobModel(map: )
     let disposeBag = DisposeBag()
-    private lazy var jobModelArray: [JobModel] = [JobModel](repeating: model, count: 15)
+    let viewModel  = DLJobViewModel()
+//    private lazy var jobModelArray: [JobModel] = [JobModel](repeating: model, count: 15)
+//    private lazy var jobModelArray: [JobModel] = [model,model]
     private lazy var dataArray:  [JobModel] = []
     private lazy var topImageArray:  [String] = []
     override func viewWillAppear(_ animated: Bool) {
@@ -30,110 +33,54 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
     
     // MARK: GetData
     func getData() {
-        
-//
-//        GetNetworkJobData.rx.request(.GetHomeTopImage).subscribe(onSuccess: { (response) in
-//            let str = String(data: response.data, encoding: String.Encoding.utf8)
-//            DLLog("返回的数据是:\(str!)")
-//            let json = try? response.mapJSON() as! [[String: Any]]
-//            DLLog("返回的数据是:\(json!)")
-//        }) { (error) in
-//            DLLog("数据请求失败\(error)")
-//        }.disposed(by: disposeBag)
-//        https://www.douban.com/j/app/radio/channels
-        
-//        url=(
-//             "https://p9.pstatp.com/weili/l/57458347372320582.webp",
-//             "https://p9.pstatp.com/weili/l/57458347372320582.webp",
-//             "https://p9.pstatp.com/weili/l/57458347372320582.webp",
-//             "https://p9.pstatp.com/weili/l/57458347372320582.webp",
-//            )
-        
-        GetNetworkJobData.rx.request(.GetHomeTopImage).mapJSON().subscribe(onSuccess: { (response) in
-//            let str = String(data: (response as AnyObject).data, encoding: String.Encoding.utf8)
-//            DLLog("返回的数据是:\(str!)")
-//            数据处理
-            if let json = response as? [String: Any],
-                let channels = json["title"] as? [[String: Any]] {
-                for dict:[String: Any] in channels{
-                    self.topImageArray.append(dict["url"] as! String)
-                }
-                DLLog("--- 请求成功！返回的如下数据 ---")
-                DLLog(json)
-            }else{
-                
+        viewModel.getTopImage().subscribe(onNext: { (array) in
+            DLLog(array.count)
+            for model in array{
+                self.topImageArray.append(model.imageUrl ?? "")
             }
-            
             self.view.addSubview(self.tableView)
             self.view.addSubview(self.topNavView)
             self.tableHeaderView.imageURLStringArr = self.topImageArray
-            //本地图片测试--加载网络图片,请用第三方库如SDWebImage等
-//            tableHeaderView.imageURLStringArr = ["home_top_image_001.jpg", "home_top_image_002.jpg", "home_top_image_003.jpg", "home_top_image_004.jpg"]
             
-//            let json = response as! [String: Any]
-//            for dict:[String: Any] in json["title"] as! NSArray{
-//                dataArray.append(dict["url"])
-//            }
+        }, onError: { (error) in
+            DLLog(error)
+        }, onCompleted: {
             
+        }) {
             
-        }) { (error) in
-             print("数据请求失败!错误原因：", error)
         }.disposed(by: disposeBag)
-        //        GetNetworkJobData.rx.request(.GetChannels).subscribe(onSuccess: { (response) in
-        //            let str = String(data: response.data, encoding: String.Encoding.utf8)
-        //            DLLog("返回的数据是\(str ?? "")")
-        //             let json = try? response.mapJSON() as! [String: Any]
-        //             DLLog(json!)
-        //
-        //        }) { (error) in
-        //            DLLog("数据请求失败\(error)")
-        //            }.disposed(by: disposeBag)
         
         
-//        GetNetworkJobData.rx.request(.GetJobList).mapJSON().subscribe(onSuccess: { (response) in
-//            let str = String(data: (response as AnyObject).data, encoding: String.Encoding.utf8)
-//            DLLog("返回的数据是:\(str!)")
-//            //            数据处理
-//            let json = response as! [String: Any]
-//            for jobDict in json{
-////                let model = JobModel(info: jobDict)
-////                dataArray.append(model)
-//            }
-//            DLLog("--- 请求成功！返回的如下数据 ---")
-//            DLLog(json)
-//            self.view.addSubview(self.tableView)
-//            self.view.addSubview(topNavView)
-//        }) { (error) in
-//            print("数据请求失败!错误原因：", error)
-//        }.disposed(by: disposeBag)
-//
-        
-//        let data = GetNetworkJobData.rx.request(.GetJobList)
-//            .mapJSON()
-//            .map{ data -> [[String: Any]] in
-//                if let json = data as? [String: Any],
-//                    let channels = json["parameter"] as? [[String: Any]] {
-//                    return channels
-//                }else{
-//                    return []
+//        GetNetworkJobData.rx.request(.GetHomeTopImage).mapJSON().subscribe(onSuccess: { (response) in
+////            let str = String(data: (response as AnyObject).data, encoding: String.Encoding.utf8)
+////            DLLog("返回的数据是:\(str!)")
+////            数据处理
+//            if let json = response as? [String: Any],
+//                let imageArray = json["title"] as? [[String: Any]] {
+//                for dict:[String: Any] in imageArray{
+//                    self.topImageArray.append(dict["url"] as! String)
 //                }
-//            }.asObservable()
-        
-//        data.bind(to: tableView.rx.items) { (tableView, row, element) in
+//                DLLog("--- 请求成功！返回的如下数据 ---")
+//                DLLog(json)
+//            }else{
 //
-//            let cell = tableView.dequeueReusableCell(withIdentifier: DLJobTableViewCellIdentifier)!
-//            cell.textLabel?.text = "\(element["name"]!)"
-//            cell.accessoryType = .disclosureIndicator
-//            return cell
-//            }.disposed(by: disposeBag)
-        
-
-        
-        
-//        self.view.addSubview(self.tableView)
-//        self.view.addSubview(topNavView)
-//        //本地图片测试--加载网络图片,请用第三方库如SDWebImage等
-//        tableHeaderView.imageURLStringArr = ["home_top_image_001.jpg", "home_top_image_002.jpg", "home_top_image_003.jpg", "home_top_image_004.jpg"]
+//            }
+//
+//            self.view.addSubview(self.tableView)
+//            self.view.addSubview(self.topNavView)
+//            self.tableHeaderView.imageURLStringArr = self.topImageArray
+//            //本地图片测试--加载网络图片,请用第三方库如SDWebImage等
+////            tableHeaderView.imageURLStringArr = ["home_top_image_001.jpg", "home_top_image_002.jpg", "home_top_image_003.jpg", "home_top_image_004.jpg"]
+//
+////            let json = response as! [String: Any]
+////            for dict:[String: Any] in json["title"] as! NSArray{
+////                dataArray.append(dict["url"])
+////            }
+//
+//
+//        }) { (error) in
+//             print("数据请求失败!错误原因：", error)
+//        }.disposed(by: disposeBag)
         
     }
     
@@ -212,7 +159,8 @@ extension DLJobViewController {
 // MARK: tableViewDelegate&tableViewDatasource
 extension DLJobViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return jobModelArray.count
+//        return jobModelArray.count
+        return 15
 //        return dataArray.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {

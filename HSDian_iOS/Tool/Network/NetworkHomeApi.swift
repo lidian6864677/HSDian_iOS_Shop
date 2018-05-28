@@ -9,6 +9,7 @@
 import Foundation
 import Moya
 import RxSwift
+//    http://47.104.192.159:8888/url/all
 private let URL_HEADER_IMAGE_HOME = "/url/all"  /// 首页顶部轮播图 url
 private let URL_JOB_LIST = "/url/all"  /// 首页顶部轮播图 url
         

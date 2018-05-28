@@ -10,28 +10,37 @@ import UIKit
 import RxSwift
 import Moya
 import SwiftyJSON
-class FriendViewModel: NSObject {
-    let disposeBag = DisposeBag()
-//    func TopImage() ->Observable<Response> {
-//        return GetNetworkJobData.request(.channels, completion: nil).asObservable()
-//        return GetNetworkJobData.reques
-        //获取数据
-//        GetNetworkJobData.rx.request(.channels)
-//            .subscribe(onSuccess: { response in
-//                //数据处理
-//                let str = String(data: response.data, encoding: String.Encoding.utf8)
-//                print("返回的数据是：", str ?? "")
-//            },onError: { error in
-//                print("数据请求失败!错误原因：", error)
-//            }).disposed(by: DisposeBag)
-//    }
-    
-//    func TopImage() ->Observable<Response> {
-//        return HomeApiServi.request(.getHome(city: city,iosVersion: iosVersion,username: username)).asObservable()
-//        return GetNetworkJobData.request(.GetHomeTopImage).asObservable()
-//    }
 
-    
-    
 
+
+import RxCocoa
+import ObjectMapper
+class DLJobViewModel {
+    func getTopImage() -> Observable<[JobTopImageModel]> {
+        return GetNetworkJobData.rx.request(.GetHomeTopImage)
+            .mapObject(JobTopImage.self)
+            .map{ $0.imageArray ?? [] }
+            .asObservable()
+    }
+//    //获取频道数据
+//    func loadChannels() -> Observable<[Channel]> {
+//        return DouBanProvider.rx.request(.channels)
+//            .mapObject(Douban.self)
+//            .map{ $0.channels ?? [] }
+//            .asObservable()
+//    }
+//
+//    //获取歌曲列表数据
+//    func loadPlaylist(channelId:String) -> Observable<Playlist> {
+//        return DouBanProvider.rx.request(.playlist(channelId))
+//            .mapObject(Playlist.self)
+//            .asObservable()
+//    }
+//
+//    //获取频道下第一首歌曲
+//    func loadFirstSong(channelId:String) -> Observable<Song> {
+//        return loadPlaylist(channelId: channelId)
+//            .filter{ $0.song.count > 0}
+//            .map{ $0.song[0] }
+//    }
 }
