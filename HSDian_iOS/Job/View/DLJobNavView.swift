@@ -99,7 +99,7 @@ class DLJobNavView: UIView {
     // MARK: update
     var offsetY: CGFloat = 0.0 {
         didSet {
-            DLLog(offsetY)
+//            DLLog(offsetY)
             let alpha = offsetY / (DLStatusBarHeight + DLnavigationBarHeight)
             topNavView.alpha = alpha
             if alpha <= 0.5 {

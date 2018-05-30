@@ -12,7 +12,6 @@
 		841A88A920AF13DF00EDCB06 /* PendingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A88A820AF13DF00EDCB06 /* PendingViewModel.swift */; };
 		841A88AB20AF13EE00EDCB06 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A88AA20AF13EE00EDCB06 /* MessageViewModel.swift */; };
 		841A88AD20AF13FB00EDCB06 /* MeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A88AC20AF13FB00EDCB06 /* MeViewModel.swift */; };
-		841A88AF20B01AEC00EDCB06 /* Observable+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A88AE20B01AEB00EDCB06 /* Observable+ObjectMapper.swift */; };
 		841D002620B91187002BBD06 /* CitySelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D002520B91187002BBD06 /* CitySelectorViewController.swift */; };
 		841D002820B9123D002BBD06 /* CitySeletorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D002720B9123D002BBD06 /* CitySeletorTableViewCell.swift */; };
 		841D002D20B91D3A002BBD06 /* CitySelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D002C20B91D3A002BBD06 /* CitySelectorViewModel.swift */; };
@@ -44,6 +43,7 @@
 		8455725120A5DE9300213256 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455725020A5DE7A00213256 /* Const.swift */; };
 		8455725320A5DEAD00213256 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455725220A5DEAD00213256 /* BaseViewController.swift */; };
 		8455725B20A6A6F700213256 /* BaseNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455725A20A6A6F700213256 /* BaseNavgationController.swift */; };
+		8492D38720BEB3FA007A1E9A /* DLUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8492D38620BEB3FA007A1E9A /* DLUserDefaults.swift */; };
 		84A3095320B93AB40020EA8E /* JobSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3095220B93AB40020EA8E /* JobSearchViewController.swift */; };
 		84A3095520B9402E0020EA8E /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3095420B9402E0020EA8E /* ResultTableViewController.swift */; };
 		84A3095720B945360020EA8E /* String+ChangePiYinExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3095620B945360020EA8E /* String+ChangePiYinExtension.swift */; };
@@ -86,7 +86,6 @@
 		841A88A820AF13DF00EDCB06 /* PendingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingViewModel.swift; sourceTree = "<group>"; };
 		841A88AA20AF13EE00EDCB06 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		841A88AC20AF13FB00EDCB06 /* MeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewModel.swift; sourceTree = "<group>"; };
-		841A88AE20B01AEB00EDCB06 /* Observable+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+ObjectMapper.swift"; sourceTree = "<group>"; };
 		841D002520B91187002BBD06 /* CitySelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectorViewController.swift; sourceTree = "<group>"; };
 		841D002720B9123D002BBD06 /* CitySeletorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySeletorTableViewCell.swift; sourceTree = "<group>"; };
 		841D002A20B9134C002BBD06 /* Cities_All.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Cities_All.plist; sourceTree = "<group>"; };
@@ -127,6 +126,7 @@
 		8455725020A5DE7A00213256 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		8455725220A5DEAD00213256 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8455725A20A6A6F700213256 /* BaseNavgationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavgationController.swift; sourceTree = "<group>"; };
+		8492D38620BEB3FA007A1E9A /* DLUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLUserDefaults.swift; sourceTree = "<group>"; };
 		84A3095220B93AB40020EA8E /* JobSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchViewController.swift; sourceTree = "<group>"; };
 		84A3095420B9402E0020EA8E /* ResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
 		84A3095620B945360020EA8E /* String+ChangePiYinExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ChangePiYinExtension.swift"; sourceTree = "<group>"; };
@@ -477,6 +477,7 @@
 				8455725020A5DE7A00213256 /* Const.swift */,
 				841F3D6620B96114009CB82D /* Client.swift */,
 				84E4BF0120B6C331000C08DD /* EnumManager.swift */,
+				8492D38620BEB3FA007A1E9A /* DLUserDefaults.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -518,7 +519,6 @@
 			isa = PBXGroup;
 			children = (
 				8436897B20BA724B0028B5EF /* NetworkHomeApi.swift */,
-				841A88AE20B01AEB00EDCB06 /* Observable+ObjectMapper.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -748,7 +748,6 @@
 				841D002620B91187002BBD06 /* CitySelectorViewController.swift in Sources */,
 				8434184D20B3EACC00661383 /* DLJobTableViewCell.swift in Sources */,
 				84A3095520B9402E0020EA8E /* ResultTableViewController.swift in Sources */,
-				841A88AF20B01AEC00EDCB06 /* Observable+ObjectMapper.swift in Sources */,
 				8455725120A5DE9300213256 /* Const.swift in Sources */,
 				8420B152209B2D7E003990EE /* PendingViewController.swift in Sources */,
 				841D002F20B92FE1002BBD06 /* UIButton+Extension.swift in Sources */,
@@ -760,6 +759,7 @@
 				8434185120B45AA700661383 /* DLJobTableViewHeaderView.swift in Sources */,
 				8434185620B51CDE00661383 /* DLJobNavView.swift in Sources */,
 				8436897C20BA724B0028B5EF /* NetworkHomeApi.swift in Sources */,
+				8492D38720BEB3FA007A1E9A /* DLUserDefaults.swift in Sources */,
 				84277F8C20A480FE001DA2F3 /* DLMessageViewController.swift in Sources */,
 				84E2D90420B30E350084C610 /* PendingTabStripViewController.swift in Sources */,
 				8455725320A5DEAD00213256 /* BaseViewController.swift in Sources */,

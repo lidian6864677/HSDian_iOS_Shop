@@ -16,19 +16,24 @@ import SwiftyJSON
 import RxCocoa
 import ObjectMapper
 class DLJobViewModel {
+    /// 获取顶部轮播图 图片
     func getTopImage() -> Observable<[JobTopImageModel]> {
         return GetNetworkJobData.rx.request(.GetHomeTopImage)
             .mapObject(JobTopImage.self)
             .map{ $0.imageArray ?? [] }
             .asObservable()
     }
-//    //获取频道数据
-//    func loadChannels() -> Observable<[Channel]> {
-//        return DouBanProvider.rx.request(.channels)
-//            .mapObject(Douban.self)
-//            .map{ $0.channels ?? [] }
-//            .asObservable()
+    //获取工作列表数据
+//    func GetJobList(page:String) -> Observable<[JobModel]> {
+//        return GetNetworkJobData.rx.request(.GetJobList(page))
+//        .mapObject(Job.self)
+//        .map{ $0.jobArray ?? []}
+//        .asObservable()
 //    }
+    func GetJobList(page:String) -> Observable<[JobModel]> {
+        return GetNetworkJobData.rx.request(.GetJobList(page)).mapArray(JobModel.self).asObservable()
+    }
+    
 //
 //    //获取歌曲列表数据
 //    func loadPlaylist(channelId:String) -> Observable<Playlist> {

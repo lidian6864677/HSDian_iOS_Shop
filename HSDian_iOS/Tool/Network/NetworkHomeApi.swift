@@ -9,35 +9,33 @@
 import Foundation
 import Moya
 import RxSwift
+import Result
 //    http://47.104.192.159:8888/url/all
 private let URL_HEADER_IMAGE_HOME = "/url/all"  /// 首页顶部轮播图 url
-private let URL_JOB_LIST = "/url/all"  /// 首页顶部轮播图 url
+private let URL_JOB_LIST = "/homePageData/queryData"  /// 首页顶部轮播图 url
         
-//初始化豆瓣FM请求的provider
+//初始化qing'qiu
 let GetNetworkJobData = MoyaProvider<NetworkHomeApi>()
 
 /** 下面定义豆瓣FM请求的endpoints（供provider使用）**/
 //请求分类
-public enum NetworkHomeApi {
+ enum NetworkHomeApi {
     case GetHomeTopImage // 获取首页列表
-    case GetJobList // 获取首页招聘信息列表
+    case GetJobList(String) // 获取首页招聘信息列表
     case GetChannels // 获取首页列表
 //    case playlist(String) //获取歌曲
 }
 
 //请求配置
 extension NetworkHomeApi: TargetType {
+    
     //服务器地址
     public var baseURL: URL {
         switch self {
         case .GetChannels  :
             return URL(string: "https://www.douban.com")!
-//            https://www.douban.com/j/app/radio/channels
         default:
             return URL(string: BASE_URL_Test)!
-            
-//        case .playlist(_):
-//            return URL(string: "https://douban.fm")!
         }
     }
     
@@ -61,13 +59,12 @@ extension NetworkHomeApi: TargetType {
     //请求任务事件（这里附带上参数）
     public var task: Task {
         switch self {
-//        case .playlist(let channel):
-//            var params: [String: Any] = [:]
-//            params["channel"] = channel
-//            params["type"] = "n"
-//            params["from"] = "mainsite"
-//            return .requestParameters(parameters: params,
-//                                      encoding: URLEncoding.default)
+        case .GetJobList(let page):
+            var params: [String: Any] = [:]
+            params["pageNum"] = page
+            params["pageSize"] = (10)
+            return .requestParameters(parameters: params,
+                                      encoding: URLEncoding.default)
         default:
             return .requestPlain
         }
@@ -87,5 +84,20 @@ extension NetworkHomeApi: TargetType {
     public var headers: [String: String]? {
         return nil
     }
+    static func errorMessage(error: MoyaError) {
+        switch error {
+        case .jsonMapping(let res):
+            guard let resString = try? res.mapJSON() as? [String : Any] else {
+                DLLog("网络请求失败")
+                return
+            }
+            DLLog(resString)
+            showTost(parametersStr: resString?["message"] as! String)
+        default:
+            DLLog("a")
+        }
+    }
+    private static func showTost(parametersStr: String) {
+        DLLog(parametersStr)
+    }
 }
-

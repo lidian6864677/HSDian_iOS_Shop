@@ -17,7 +17,8 @@ struct Job: Mappable {
 
     // Mappable
     mutating func mapping(map: Map) {
-        jobArray <- map["data"]
+        DLLog(map.JSON)
+        jobArray <- map["title"]
     }
 }
 
@@ -42,6 +43,14 @@ struct JobModel: Mappable {
         companyName <- map["abbr_en"]
     }
 }
+
+
+
+
+
+
+
+
 
 /// 首页顶部图片
 struct JobTopImage: Mappable {

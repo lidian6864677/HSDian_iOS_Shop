@@ -14,11 +14,10 @@ import RxCocoa
 import ObjectMapper
 private let DLJobTableViewCellIdentifier = "DLJobTableViewCell_Identifier"
 class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, CycleViewDelegate {
-//    let model = JobModel(map: )
+    //    let model = JobModel(map: )
     let disposeBag = DisposeBag()
     let viewModel  = DLJobViewModel()
-//    private lazy var jobModelArray: [JobModel] = [JobModel](repeating: model, count: 15)
-//    private lazy var jobModelArray: [JobModel] = [model,model]
+    private lazy var jobModelArray: [JobModel] = []
     private lazy var dataArray:  [JobModel] = []
     private lazy var topImageArray:  [String] = []
     override func viewWillAppear(_ animated: Bool) {
@@ -30,7 +29,7 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
         getData()
     }
     
-    
+   
     // MARK: GetData
     func getData() {
         viewModel.getTopImage().subscribe(onNext: { (array) in
@@ -38,50 +37,37 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
             for model in array{
                 self.topImageArray.append(model.imageUrl ?? "")
             }
+            if self.topImageArray.count > 0{
+                DLUserDefaults.shareDLUserDefaults.setDefaultsArray(key: UserDefaults_Top_image_Banner, saveArray: self.topImageArray)
+            }else{
+                self.topImageArray = DLUserDefaults.shareDLUserDefaults.getDefaultsArray(key: UserDefaults_Top_image_Banner) as! [String]
+            }
+            
+            self.tableHeaderView.imageURLStringArr = self.topImageArray
             self.view.addSubview(self.tableView)
             self.view.addSubview(self.topNavView)
-            self.tableHeaderView.imageURLStringArr = self.topImageArray
-            
         }, onError: { (error) in
-            DLLog(error)
+            DLLog("\(error),\(error.localizedDescription)")
         }, onCompleted: {
             
         }) {
             
+            }.disposed(by: disposeBag)
+        
+        let page = 1
+
+        viewModel.GetJobList(page: String(page)).subscribe { (event) in
+            switch event{
+            case .next(let models):
+                self.jobModelArray = models
+                self.tableView.reloadData()
+            case .error(let error):
+               NetworkHomeApi.errorMessage(error: error as! MoyaError)
+            case .completed:
+                return
+            }
         }.disposed(by: disposeBag)
-        
-        
-//        GetNetworkJobData.rx.request(.GetHomeTopImage).mapJSON().subscribe(onSuccess: { (response) in
-////            let str = String(data: (response as AnyObject).data, encoding: String.Encoding.utf8)
-////            DLLog("返回的数据是:\(str!)")
-////            数据处理
-//            if let json = response as? [String: Any],
-//                let imageArray = json["title"] as? [[String: Any]] {
-//                for dict:[String: Any] in imageArray{
-//                    self.topImageArray.append(dict["url"] as! String)
-//                }
-//                DLLog("--- 请求成功！返回的如下数据 ---")
-//                DLLog(json)
-//            }else{
-//
-//            }
-//
-//            self.view.addSubview(self.tableView)
-//            self.view.addSubview(self.topNavView)
-//            self.tableHeaderView.imageURLStringArr = self.topImageArray
-//            //本地图片测试--加载网络图片,请用第三方库如SDWebImage等
-////            tableHeaderView.imageURLStringArr = ["home_top_image_001.jpg", "home_top_image_002.jpg", "home_top_image_003.jpg", "home_top_image_004.jpg"]
-//
-////            let json = response as! [String: Any]
-////            for dict:[String: Any] in json["title"] as! NSArray{
-////                dataArray.append(dict["url"])
-////            }
-//
-//
-//        }) { (error) in
-//             print("数据请求失败!错误原因：", error)
-//        }.disposed(by: disposeBag)
-        
+//        tableHeaderView.imageURLStringArr = ["home_top_image_004.jpg"]
     }
     
     // MARK: GUIs
@@ -98,7 +84,9 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
         //        tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0)
         tableView.separatorStyle = .none
         tableView.register(DLJobTableViewCell.self, forCellReuseIdentifier: DLJobTableViewCellIdentifier)
-        tableView.tableHeaderView = tableHeaderView
+        if self.topImageArray.count > 0 {
+            tableView.tableHeaderView = tableHeaderView
+        }
         return tableView
     }()
     /// tableViewHeaderView
@@ -159,9 +147,9 @@ extension DLJobViewController {
 // MARK: tableViewDelegate&tableViewDatasource
 extension DLJobViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return jobModelArray.count
+        //        return jobModelArray.count
         return 15
-//        return dataArray.count
+        //        return dataArray.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -185,7 +173,7 @@ extension DLJobViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:  DLJobTableViewCell = tableView.dequeueReusableCell(withIdentifier: DLJobTableViewCellIdentifier, for: indexPath) as! DLJobTableViewCell
         cell.updateJobModel(jobModel: nil)
-//        cell.updateJobModel(jobModel: dataArray[indexPath.row])
+        //        cell.updateJobModel(jobModel: dataArray[indexPath.row])
         return cell
     }
     
