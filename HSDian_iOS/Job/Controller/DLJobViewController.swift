@@ -20,42 +20,23 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
     private lazy var jobModelArray: [JobModel] = []
     private lazy var dataArray:  [JobModel] = []
     private lazy var topImageArray:  [String] = []
+    
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    super.viewWillAppear(animated)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getData()
-    }
-    
+        topImageArray = DLUserDefaults.shareDLUserDefaults.getDefaultsArray(key: UserDefaults_Top_image_Banner) as! [String]
+        self.tableHeaderView.imageURLStringArr = topImageArray
+        self.view.addSubview(self.tableView)
+        self.view.addSubview(self.topNavView)
+        SetPullDownRefresh(vc: self, selector: #selector(getData), tableView: self.tableView)
+    }		
    
     // MARK: GetData
-    func getData() {
-        viewModel.getTopImage().subscribe(onNext: { (array) in
-            DLLog(array.count)
-            for model in array{
-                self.topImageArray.append(model.imageUrl ?? "")
-            }
-            if self.topImageArray.count > 0{
-                DLUserDefaults.shareDLUserDefaults.setDefaultsArray(key: UserDefaults_Top_image_Banner, saveArray: self.topImageArray)
-            }else{
-                self.topImageArray = DLUserDefaults.shareDLUserDefaults.getDefaultsArray(key: UserDefaults_Top_image_Banner) as! [String]
-            }
-            
-            self.tableHeaderView.imageURLStringArr = self.topImageArray
-            self.view.addSubview(self.tableView)
-            self.view.addSubview(self.topNavView)
-        }, onError: { (error) in
-            DLLog("\(error),\(error.localizedDescription)")
-        }, onCompleted: {
-            
-        }) {
-            
-            }.disposed(by: disposeBag)
-        
+    @objc func getData() {
         let page = 1
-
         viewModel.GetJobList(page: String(page)).subscribe { (event) in
             switch event{
             case .next(let models):
@@ -66,8 +47,8 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
             case .completed:
                 return
             }
+            self.tableView.mj_header.endRefreshing()
         }.disposed(by: disposeBag)
-//        tableHeaderView.imageURLStringArr = ["home_top_image_004.jpg"]
     }
     
     // MARK: GUIs

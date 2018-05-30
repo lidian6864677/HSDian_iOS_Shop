@@ -9,19 +9,24 @@
     target 'HSDian_iOS' do
 #        pod 'ShowWebAuth'
         use_frameworks!
+        # network
         pod 'SnapKit'
         pod 'Alamofire'
         pod 'Moya'
-#        pod 'RxMoya'
         pod 'SwiftyJSON'
         pod 'RxSwift'
         pod 'Moya/RxSwift'
         pod 'ObjectMapper'
         pod 'RxCocoa'
-        pod 'XLPagerTabStrip'
+        
+        # refresh && HUD
+        pod 'MJRefresh'
         pod 'Kingfisher'
-#        pod 'SwiftyJSON'
-#        pod 'Moya', '~> 8.0.0'
+        
+        
+        pod 'XLPagerTabStrip'
+        
+        #  third
         pod 'AMapLocation'
 #        pod 'AMap3DMap'
             #3D地图SDK

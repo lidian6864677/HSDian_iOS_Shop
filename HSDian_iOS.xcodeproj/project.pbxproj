@@ -43,6 +43,8 @@
 		8455725120A5DE9300213256 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455725020A5DE7A00213256 /* Const.swift */; };
 		8455725320A5DEAD00213256 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455725220A5DEAD00213256 /* BaseViewController.swift */; };
 		8455725B20A6A6F700213256 /* BaseNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455725A20A6A6F700213256 /* BaseNavgationController.swift */; };
+		8462349520BEDDFF001C29F1 /* DLCommonPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462349420BEDDFF001C29F1 /* DLCommonPublic.swift */; };
+		8462349720BEE18F001C29F1 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462349620BEE18F001C29F1 /* Prefs.swift */; };
 		8492D38720BEB3FA007A1E9A /* DLUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8492D38620BEB3FA007A1E9A /* DLUserDefaults.swift */; };
 		84A3095320B93AB40020EA8E /* JobSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3095220B93AB40020EA8E /* JobSearchViewController.swift */; };
 		84A3095520B9402E0020EA8E /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3095420B9402E0020EA8E /* ResultTableViewController.swift */; };
@@ -126,6 +128,8 @@
 		8455725020A5DE7A00213256 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		8455725220A5DEAD00213256 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8455725A20A6A6F700213256 /* BaseNavgationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavgationController.swift; sourceTree = "<group>"; };
+		8462349420BEDDFF001C29F1 /* DLCommonPublic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLCommonPublic.swift; sourceTree = "<group>"; };
+		8462349620BEE18F001C29F1 /* Prefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
 		8492D38620BEB3FA007A1E9A /* DLUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLUserDefaults.swift; sourceTree = "<group>"; };
 		84A3095220B93AB40020EA8E /* JobSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchViewController.swift; sourceTree = "<group>"; };
 		84A3095420B9402E0020EA8E /* ResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
@@ -453,6 +457,7 @@
 		84547CB920A485C3002353FE /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				8462349320BEDCEE001C29F1 /* Public */,
 				8434185220B516D500661383 /* Extensions */,
 				84CD7DB820B01B96005A3B13 /* Network */,
 				8455724F20A5DE7A00213256 /* Manager */,
@@ -478,6 +483,7 @@
 				841F3D6620B96114009CB82D /* Client.swift */,
 				84E4BF0120B6C331000C08DD /* EnumManager.swift */,
 				8492D38620BEB3FA007A1E9A /* DLUserDefaults.swift */,
+				8462349620BEE18F001C29F1 /* Prefs.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -493,6 +499,14 @@
 				84E2D8FC20B3074E0084C610 /* PrefixHeader.h */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8462349320BEDCEE001C29F1 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				8462349420BEDDFF001C29F1 /* DLCommonPublic.swift */,
+			);
+			path = Public;
 			sourceTree = "<group>";
 		};
 		84AB72E120B6F6AE00CB9DC2 /* Lib */ = {
@@ -685,6 +699,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-HSDian_iOS/Pods-HSDian_iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -698,6 +713,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -737,6 +753,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8462349720BEE18F001C29F1 /* Prefs.swift in Sources */,
 				841F57AB20BC30AC00B93E4D /* Response+ObjectMapper.swift in Sources */,
 				841F57AC20BC30AC00B93E4D /* ObservableType+ObjectMapper.swift in Sources */,
 				841F57AD20BC30AC00B93E4D /* Single+ObjectMapper.swift in Sources */,
@@ -776,6 +793,7 @@
 				841A88AB20AF13EE00EDCB06 /* MessageViewModel.swift in Sources */,
 				8436897820BA6AB50028B5EF /* DLRequest.swift in Sources */,
 				84A3095720B945360020EA8E /* String+ChangePiYinExtension.swift in Sources */,
+				8462349520BEDDFF001C29F1 /* DLCommonPublic.swift in Sources */,
 				841D09FA20AC680E0020D593 /* BaseTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
