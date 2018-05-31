@@ -7,36 +7,48 @@
 //
 
 import UIKit
+import RxSwift
 import Moya
 import SwiftyJSON
-import RxSwift
 import RxCocoa
+import ObjectMapper
 class Prefs: NSObject {
-    static let sharePrefs = Prefs()
+    let disposeBag = DisposeBag()
+    static let share = Prefs()
     func getTopBannerImage() {
         let viewModel  = DLJobViewModel()
-        let disposeBag = DisposeBag()
-        var topImageArray:  [String] = []
         viewModel.getTopImage().subscribe { (event) in
             switch event{
             case .next(let models):
+                var imageArray: [String] = []
+                
                 for model in models{
-                    topImageArray.append(model.imageUrl ?? "")
+                    imageArray.append(model.imageUrl ?? "")
                 }
-                if topImageArray.count > 0{
+                if imageArray.count > 0{
                     /// 请求成功更新本地
-                    DLUserDefaults.shareDLUserDefaults.setDefaultsArray(key: UserDefaults_Top_image_Banner, saveArray: topImageArray)
+                    DLUserDefaults.shareDLUserDefaults.setDefaultsArray(key: UserDefaults_Top_image_Banner, saveArray: imageArray)
+                    //                    self.topImageArray = imageArray
                 }
-//                else{
-//                    /// 请求失败使用本地存储的
-//                    topImageArray = DLUserDefaults.shareDLUserDefaults.getDefaultsArray(key: UserDefaults_Top_image_Banner) as! [String]
-//                }
-//                self.tableHeaderView.imageURLStringArr = self.topImageArray
+                
             case .error(let error):
                 NetworkHomeApi.errorMessage(error: error as! MoyaError)
             case .completed:
                 return
             }
             }.disposed(by: disposeBag)
+        
+        
+        
+        
     }
 }
+
+
+
+
+
+
+
+
+

@@ -38,7 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = rootNavigationController
         /// 启动前准备
         AMapServices.shared().apiKey = AMapAppKey
-        Prefs.sharePrefs.getTopBannerImage() /// 获取首页Banner图片
+//        UIPress.getTopBannerImage() /// 获取首页Banner图片
+        Prefs.share.getTopBannerImage()
         
         
         // Override point for customization after application launch.

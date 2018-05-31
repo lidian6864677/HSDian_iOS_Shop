@@ -9,18 +9,6 @@
 import Foundation
 import ObjectMapper
 
-struct Job: Mappable {
-    //频道列表
-    var jobArray: [JobModel]?
-
-    init?(map: Map) { }
-
-    // Mappable
-    mutating func mapping(map: Map) {
-        DLLog(map.JSON)
-        jobArray <- map["title"]
-    }
-}
 
 struct JobModel: Mappable {
     var jobName: String?     /// 工作内容
@@ -34,36 +22,19 @@ struct JobModel: Mappable {
     init?(map: Map) {}
     
     mutating func mapping(map: Map) {
-        jobName     <- map["name"]
-        address     <- map["name_en"]
-        time        <- map["channel_id"]
-        money       <- map["seq_id"]
-        settlement  <- map["abbr_en"]
-        companyIcon <- map["abbr_en"]
-        companyName <- map["abbr_en"]
+        jobName     <- map["jobName"]
+        address     <- map["address"]
+        time        <- map["time"]
+        money       <- map["money"]
+        settlement  <- map["settlement"]
+        companyIcon <- map["companyIcon"]
+        companyName <- map["companyName"]
     }
 }
-
-
-
-
-
-
-
 
 
 /// 首页顶部图片
-struct JobTopImage: Mappable {
-    //频道列表
-    var imageArray: [JobTopImageModel]?
 
-    init?(map: Map) { }
-
-    // Mappable
-    mutating func mapping(map: Map) {
-        imageArray <- map["title"]
-    }
-}
 
 struct JobTopImageModel: Mappable {
     var imageUrl: String?     /// 图片url

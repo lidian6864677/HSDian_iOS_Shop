@@ -12,9 +12,11 @@ import SwiftyJSON
 import RxSwift
 import RxCocoa
 import ObjectMapper
+import MJRefresh
 private let DLJobTableViewCellIdentifier = "DLJobTableViewCell_Identifier"
 class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, CycleViewDelegate {
     //    let model = JobModel(map: )
+    private var page = 1
     let disposeBag = DisposeBag()
     let viewModel  = DLJobViewModel()
     private lazy var jobModelArray: [JobModel] = []
@@ -27,28 +29,51 @@ class DLJobViewController: BaseViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        topImageArray = DLUserDefaults.shareDLUserDefaults.getDefaultsArray(key: UserDefaults_Top_image_Banner) as! [String]
+      
+        
+//        else{
+            self.topImageArray = DLUserDefaults.shareDLUserDefaults.getDefaultsArray(key: UserDefaults_Top_image_Banner) as! [String]
+//        }
+        
         self.tableHeaderView.imageURLStringArr = topImageArray
         self.view.addSubview(self.tableView)
         self.view.addSubview(self.topNavView)
-        SetPullDownRefresh(vc: self, selector: #selector(getData), tableView: self.tableView)
-    }		
+        SetHeaderRefresh(vc: self, selector: #selector(refresh), tableView: self.tableView)
+    }
    
     // MARK: GetData
-    @objc func getData() {
-        let page = 1
+    func getData() {
         viewModel.GetJobList(page: String(page)).subscribe { (event) in
             switch event{
             case .next(let models):
-                self.jobModelArray = models
-                self.tableView.reloadData()
+                if self.page == 1 {
+                    self.jobModelArray.removeAll()
+                }
+                
+                if models.count > 0 {
+                    self.jobModelArray.append(contentsOf: models)
+                }
+                if self.jobModelArray.count > 0 && self.page == 1{
+                    SetFooterRefresh(vc: self, selector: #selector(self.loadMore), tableView: self.tableView)
+                }
+                endRefreshWithData(dataArray: self.jobModelArray as NSArray, page: self.page, tableView: self.tableView)
             case .error(let error):
+                endReftrsWithError(tableView: self.tableView)
                NetworkHomeApi.errorMessage(error: error as! MoyaError)
             case .completed:
                 return
             }
-            self.tableView.mj_header.endRefreshing()
+            
         }.disposed(by: disposeBag)
+    }
+    
+    @objc func refresh() {
+        page = 1
+        getData()
+    }
+    @objc func loadMore() {
+        page+=1
+        getData()
     }
     
     // MARK: GUIs
@@ -128,8 +153,8 @@ extension DLJobViewController {
 // MARK: tableViewDelegate&tableViewDatasource
 extension DLJobViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //        return jobModelArray.count
-        return 15
+                return jobModelArray.count
+//        return 15
         //        return dataArray.count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -153,8 +178,8 @@ extension DLJobViewController {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:  DLJobTableViewCell = tableView.dequeueReusableCell(withIdentifier: DLJobTableViewCellIdentifier, for: indexPath) as! DLJobTableViewCell
-        cell.updateJobModel(jobModel: nil)
-        //        cell.updateJobModel(jobModel: dataArray[indexPath.row])
+//        cell.updateJobModel(jobModel: nil)
+                cell.updateJobModel(jobModel: jobModelArray[indexPath.row])
         return cell
     }
     

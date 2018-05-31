@@ -10,18 +10,16 @@ import UIKit
 import RxSwift
 import Moya
 import SwiftyJSON
-
-
-
 import RxCocoa
 import ObjectMapper
 class DLJobViewModel {
     /// 获取顶部轮播图 图片
     func getTopImage() -> Observable<[JobTopImageModel]> {
-        return GetNetworkJobData.rx.request(.GetHomeTopImage)
-            .mapObject(JobTopImage.self)
-            .map{ $0.imageArray ?? [] }
-            .asObservable()
+//        return GetNetworkJobData.rx.request(.GetHomeTopImage)
+//            .mapObject(JobTopImage.self)
+//            .map{ $0.imageArray ?? [] }
+//            .asObservable()
+        return GetNetworkJobData.rx.request(.GetHomeTopImage).mapArray(JobTopImageModel.self).asObservable()
     }
     //获取工作列表数据
 //    func GetJobList(page:String) -> Observable<[JobModel]> {
