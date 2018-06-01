@@ -62,7 +62,7 @@ extension NetworkHomeApi: TargetType {
         case .GetJobList(let page):
             var params: [String: Any] = [:]
             params["pageNum"] = page
-            params["pageSize"] = (1)
+            params["pageSize"] = (10)
             return .requestParameters(parameters: params,
                                       encoding: URLEncoding.default)
         default:

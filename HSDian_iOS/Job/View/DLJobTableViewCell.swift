@@ -49,7 +49,7 @@ class DLJobTableViewCell: UITableViewCell {
         addressLabel.snp.makeConstraints { (make) in
             make.top.equalTo(jobName.snp.bottom).offset(10)
             make.left.equalTo(jobName)
-            make.width.equalTo(30)
+            make.width.equalTo(50)
         }
         timeLabel.snp.makeConstraints { (make) in
             make.top.equalTo(addressLabel)

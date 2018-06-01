@@ -2,23 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>是否允许访问您的相册，以便您选择系统中的图片</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>是否允许访问您的相册，以便您选择系统中的图片</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>我们需要通过定位获取您的地理位置,进而获取您所在地区的招聘信息</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>我们需要通过定位获取您的地理位置,进而获取您所在地区的招聘信息</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>我们需要通过定位获取您的地理位置,进而获取您所在地区的招聘信息</string>
-	<key>NSCameraUsageDescription</key>
-	<string>是否允许访问您的相机，以便您使用系统相机</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -39,6 +22,23 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>是否允许访问您的相机，以便您使用系统相机</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>我们需要通过定位获取您的地理位置,进而获取您所在地区的招聘信息</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>我们需要通过定位获取您的地理位置,进而获取您所在地区的招聘信息</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>我们需要通过定位获取您的地理位置,进而获取您所在地区的招聘信息</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>是否允许访问您的相册，以便您选择系统中的图片</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>是否允许访问您的相册，以便您选择系统中的图片</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
