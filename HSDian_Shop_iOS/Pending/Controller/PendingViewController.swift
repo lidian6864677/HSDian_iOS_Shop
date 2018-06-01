@@ -10,8 +10,9 @@ import UIKit
 import SnapKit
 import XLPagerTabStrip
 class PendingViewController: BaseViewController,IndicatorInfoProvider {
-    private lazy var backBtn: UIButton          = UIButton()
+    public var itemInfo: IndicatorInfo = "全部"
     
+    private lazy var backBtn: UIButton          = UIButton()
     var labelNumber:Double = 0
     var result:UILabel!
     var timer:Timer!
@@ -129,13 +130,7 @@ class PendingViewController: BaseViewController,IndicatorInfoProvider {
         self.result.text = "0.0"
     }
     
-    class MyEmbeddedViewController: UITableViewController, IndicatorInfoProvider {
-        
-        func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-            return IndicatorInfo(title: "My Child title")
-        }
-    }
-    public var itemInfo: IndicatorInfo = "全部"
+    
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return itemInfo
     }

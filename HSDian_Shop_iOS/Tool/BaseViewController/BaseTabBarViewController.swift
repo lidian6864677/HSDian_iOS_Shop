@@ -10,17 +10,49 @@ import UIKit
 
 class BaseTabBarViewController: UITabBarController,UITabBarControllerDelegate {
     
+    private lazy var composeBtn: UIButton = {
+        let button = UIButton(type: UIButtonType.custom)
+        button.setImage(UIImage(named: "home_recruit_info_button"), for: .normal)
+        return button
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBar.isTranslucent = false
         self.delegate = self
         setUpTabBar()
-        
         setChildVc()
+        setupComposBtn()
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupTabbarItems()
+    }
+    
     var _lastSelectedIndex: NSInteger! = 0
     
+    func setupComposBtn() {
+        tabBar.addSubview(composeBtn)
+        composeBtn.frame = CGRect(x: 0, y: 0, width: 50, height: 40)
+        composeBtn.center = CGPoint(x: tabBar.center.x, y: tabBar.bounds.size.height * 0.5)
+        composeBtn.addTarget(self, action: #selector(clickbutton), for: .touchUpInside)
+    }
+     func setupTabbarItems() {
+        
+        //1.遍历所有的 item
+        for i in 0..<tabBar.items!.count {
+            
+            //2. 获取 item
+            let item = tabBar.items![i]
+            
+            //3.如果是下标值为2, 则该item不可以和用户交互
+            if i == 2 {
+                item.isEnabled = false
+                //跳出本次循环
+                continue
+            }
+        }
+    }
     fileprivate func setUpTabBar(){
         /// 这两个很主要缺一不可
         self.tabBar.shadowImage = UIImage()
@@ -38,10 +70,11 @@ class BaseTabBarViewController: UITabBarController,UITabBarControllerDelegate {
         UITabBar.appearance().tintColor = UIColor.black
     }
     fileprivate func setChildVc(){
-        prepareChildViewController(DLJobViewController(), title: "职位", normalImage: "TabBar0_new", selectedImage: "TabBar0_new_hover")
-        prepareChildViewController(PendingTabStripViewController(), title: "待办", normalImage: "TabBar1_new", selectedImage: "TabBar1_new_hover")
+//        prepareChildViewController(DLJobViewController(), title: "职位", normalImage: "TabBar0_new", selectedImage: "TabBar0_new_hover")
+        prepareChildViewController(PendingTabStripViewController(), title: "职位", normalImage: "TabBar0_new", selectedImage: "TabBar0_new_hover")
+        prepareChildViewController(DLJobViewController(), title: "待办", normalImage: "TabBar1_new", selectedImage: "TabBar1_new_hover")
         
-        //        prepareChildViewController(ChangeFontViewController(), title: "", normalImage: "TabBar4_new_hover", selectedImage: "TabBar4_new_hover")
+        prepareChildViewController(PendingTabStripViewController(), title: "", normalImage: "", selectedImage: "")
         
         prepareChildViewController(DLMessageViewController(), title: "消息", normalImage: "TabBar2_new", selectedImage: "TabBar2_new_hover")
         prepareChildViewController(DLMeViewController(), title: "我", normalImage: "TabBar3_new", selectedImage: "TabBar3_new_hover")
@@ -91,7 +124,14 @@ class BaseTabBarViewController: UITabBarController,UITabBarControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    @objc func clickbutton() {
+        let composeVC = RecruitViewController()
+        
+        let nav = UINavigationController(rootViewController: composeVC)
+        
+        present(nav, animated: true, completion: nil)
+
+    }
     /*
      // MARK: - Navigation
      
