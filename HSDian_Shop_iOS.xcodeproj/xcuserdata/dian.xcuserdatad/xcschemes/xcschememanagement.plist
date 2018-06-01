@@ -16,10 +16,17 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>HSDian_iOS.xcscheme</key>
+		<key>HSDian_Shop_iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>15</integer>
+		</dict>
+		<key>HSDian_iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
