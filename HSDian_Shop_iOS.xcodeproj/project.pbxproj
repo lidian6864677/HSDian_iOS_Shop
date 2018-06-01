@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		431DDB0BCCBEC54240EBD417 /* Pods_HSDian_Shop_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0366813A80A3D8A54749A7B9 /* Pods_HSDian_Shop_iOS.framework */; };
+		840FBB0E20C185F600E06C6A /* RecruitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FBB0D20C185F600E06C6A /* RecruitViewController.swift */; };
 		841A88A720AF139600EDCB06 /* DLJobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A88A620AF139600EDCB06 /* DLJobViewModel.swift */; };
 		841A88A920AF13DF00EDCB06 /* PendingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A88A820AF13DF00EDCB06 /* PendingViewModel.swift */; };
 		841A88AB20AF13EE00EDCB06 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A88AA20AF13EE00EDCB06 /* MessageViewModel.swift */; };
@@ -45,6 +46,8 @@
 		8455725B20A6A6F700213256 /* BaseNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455725A20A6A6F700213256 /* BaseNavgationController.swift */; };
 		8462349520BEDDFF001C29F1 /* DLCommonPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462349420BEDDFF001C29F1 /* DLCommonPublic.swift */; };
 		8462349720BEE18F001C29F1 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462349620BEE18F001C29F1 /* Prefs.swift */; };
+		846622FB20C1749A009342F8 /* DLReviewingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846622FA20C1749A009342F8 /* DLReviewingViewController.swift */; };
+		846622FD20C179C1009342F8 /* ReviewingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846622FC20C179C1009342F8 /* ReviewingTableViewCell.swift */; };
 		8492D38720BEB3FA007A1E9A /* DLUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8492D38620BEB3FA007A1E9A /* DLUserDefaults.swift */; };
 		84A3095320B93AB40020EA8E /* JobSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3095220B93AB40020EA8E /* JobSearchViewController.swift */; };
 		84A3095520B9402E0020EA8E /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3095420B9402E0020EA8E /* ResultTableViewController.swift */; };
@@ -84,6 +87,7 @@
 		4A6BF05E7160D1CDC63ED910 /* Pods_HSDian_Shop_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HSDian_Shop_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC382B985E142B048BC913D /* Pods-HSDian_Shop_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSDian_Shop_iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSDian_Shop_iOSTests/Pods-HSDian_Shop_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		82AA99604378FF4E70769CA9 /* Pods-HSDian_Shop_iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSDian_Shop_iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSDian_Shop_iOSUITests/Pods-HSDian_Shop_iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		840FBB0D20C185F600E06C6A /* RecruitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruitViewController.swift; sourceTree = "<group>"; };
 		841A88A620AF139600EDCB06 /* DLJobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLJobViewModel.swift; sourceTree = "<group>"; };
 		841A88A820AF13DF00EDCB06 /* PendingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingViewModel.swift; sourceTree = "<group>"; };
 		841A88AA20AF13EE00EDCB06 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 		8455725A20A6A6F700213256 /* BaseNavgationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavgationController.swift; sourceTree = "<group>"; };
 		8462349420BEDDFF001C29F1 /* DLCommonPublic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLCommonPublic.swift; sourceTree = "<group>"; };
 		8462349620BEE18F001C29F1 /* Prefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
+		846622FA20C1749A009342F8 /* DLReviewingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLReviewingViewController.swift; sourceTree = "<group>"; };
+		846622FC20C179C1009342F8 /* ReviewingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewingTableViewCell.swift; sourceTree = "<group>"; };
 		8492D38620BEB3FA007A1E9A /* DLUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLUserDefaults.swift; sourceTree = "<group>"; };
 		84A3095220B93AB40020EA8E /* JobSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchViewController.swift; sourceTree = "<group>"; };
 		84A3095420B9402E0020EA8E /* ResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +197,46 @@
 				2BEAEBBC45C880FB222DE8BD /* Pods-HSDian_Shop_iOS.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		840FBB0820C185BB00E06C6A /* Recruit */ = {
+			isa = PBXGroup;
+			children = (
+				840FBB0B20C185E000E06C6A /* Controller */,
+				840FBB0C20C185E000E06C6A /* Model */,
+				840FBB0A20C185E000E06C6A /* View */,
+				840FBB0920C185E000E06C6A /* ViewModel */,
+			);
+			path = Recruit;
+			sourceTree = "<group>";
+		};
+		840FBB0920C185E000E06C6A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		840FBB0A20C185E000E06C6A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		840FBB0B20C185E000E06C6A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				840FBB0D20C185F600E06C6A /* RecruitViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		840FBB0C20C185E000E06C6A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		841A889220AF122F00EDCB06 /* Me */ = {
@@ -290,6 +336,7 @@
 			children = (
 				84E2D90320B30E350084C610 /* PendingTabStripViewController.swift */,
 				8420B151209B2D7E003990EE /* PendingViewController.swift */,
+				846622FA20C1749A009342F8 /* DLReviewingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -297,6 +344,7 @@
 		841A889C20AF129800EDCB06 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				846622FC20C179C1009342F8 /* ReviewingTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -415,8 +463,9 @@
 		8420B14E209B2D7E003990EE /* HSDian_Shop_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				841A889520AF126600EDCB06 /* Job */,
 				841A889320AF122F00EDCB06 /* Pending */,
+				841A889520AF126600EDCB06 /* Job */,
+				840FBB0820C185BB00E06C6A /* Recruit */,
 				841A889420AF125500EDCB06 /* Message */,
 				841A889220AF122F00EDCB06 /* Me */,
 				84547CB920A485C3002353FE /* Tool */,
@@ -765,8 +814,10 @@
 				841D002620B91187002BBD06 /* CitySelectorViewController.swift in Sources */,
 				8434184D20B3EACC00661383 /* DLJobTableViewCell.swift in Sources */,
 				84A3095520B9402E0020EA8E /* ResultTableViewController.swift in Sources */,
+				840FBB0E20C185F600E06C6A /* RecruitViewController.swift in Sources */,
 				8455725120A5DE9300213256 /* Const.swift in Sources */,
 				8420B152209B2D7E003990EE /* PendingViewController.swift in Sources */,
+				846622FB20C1749A009342F8 /* DLReviewingViewController.swift in Sources */,
 				841D002F20B92FE1002BBD06 /* UIButton+Extension.swift in Sources */,
 				841D002820B9123D002BBD06 /* CitySeletorTableViewCell.swift in Sources */,
 				841A88AD20AF13FB00EDCB06 /* MeViewModel.swift in Sources */,
@@ -778,6 +829,7 @@
 				8436897C20BA724B0028B5EF /* NetworkHomeApi.swift in Sources */,
 				8492D38720BEB3FA007A1E9A /* DLUserDefaults.swift in Sources */,
 				84277F8C20A480FE001DA2F3 /* DLMessageViewController.swift in Sources */,
+				846622FD20C179C1009342F8 /* ReviewingTableViewCell.swift in Sources */,
 				84E2D90420B30E350084C610 /* PendingTabStripViewController.swift in Sources */,
 				8455725320A5DEAD00213256 /* BaseViewController.swift in Sources */,
 				8455725B20A6A6F700213256 /* BaseNavgationController.swift in Sources */,

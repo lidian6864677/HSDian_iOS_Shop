@@ -29,7 +29,7 @@ class PendingTabStripViewController: ButtonBarPagerTabStripViewController {
             newCell?.label.textColor = #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)
         }
         self.containerView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.buttonBarView)
+            make.top.equalTo(self.buttonBarView.snp.bottom)
             make.left.right.equalTo(0)
             make.bottom.equalTo(-1)
         }
@@ -56,16 +56,17 @@ class PendingTabStripViewController: ButtonBarPagerTabStripViewController {
     // MARK: pagerTab
     override public func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         
-        let child_1 = PendingViewController()
-        child_1.itemInfo.title = "打卡"
-        let child_2  = PendingViewController()
-        child_2.itemInfo.title = "待面试"
-        let child_3  = PendingViewController()
-        child_3.itemInfo.title = "待评价"
+        let child_1 = DLReviewingViewController()
+        child_1.itemInfo.title = "审核中"
+        let child_2  = DLReviewingViewController()
+        child_2.itemInfo.title = "招聘中"
+        let child_3  = DLReviewingViewController()
+        child_3.itemInfo.title = "已暂停"
         let child_4  = PendingViewController()
-        child_4.itemInfo.title = "待处理"
-        
-        return [child_1, child_2, child_3, child_4]
+        child_4.itemInfo.title = "已完成"
+        let child_5  = PendingViewController()
+        child_5.itemInfo.title = "未通过"
+        return [child_1, child_2, child_3, child_4, child_5]
     }
  
 
