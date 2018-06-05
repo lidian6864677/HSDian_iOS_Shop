@@ -9,7 +9,7 @@
 import UIKit
 
 class BaseViewController: UIViewController,UINavigationControllerDelegate, UIGestureRecognizerDelegate {
-    private let HiddenNavigationBarViewControllersStringName:[String] = ["DLJobViewController","JobSearchViewController"]
+    private let HiddenNavigationBarViewControllersStringName:[String] = ["DLJobViewController","JobSearchViewController", "RecruitViewController"]
     private var HiddenNavigationBarViewControllers: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
