@@ -125,12 +125,10 @@ class BaseTabBarViewController: UITabBarController,UITabBarControllerDelegate {
     }
     
     @objc func clickbutton() {
+        /// 跳转
         let composeVC = RecruitViewController()
-        
-        let nav = UINavigationController(rootViewController: composeVC)
-        
-        present(nav, animated: true, completion: nil)
-
+        composeVC.view.alpha = 1
+        present(composeVC, animated: true, completion: nil)
     }
     /*
      // MARK: - Navigation

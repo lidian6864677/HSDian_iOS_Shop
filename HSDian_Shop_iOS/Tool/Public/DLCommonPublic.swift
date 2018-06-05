@@ -25,6 +25,7 @@ func SetHeaderRefresh(vc: UIViewController, selector: Selector, tableView: UITab
     header?.lastUpdatedTimeLabel.isHidden = true
     header?.stateLabel.isHidden = true
     tableView.mj_header = header
+    tableView.mj_header.beginRefreshing()
 }
 
 func SetFooterRefresh(vc: UIViewController, selector: Selector, tableView: UITableView) {
