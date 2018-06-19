@@ -48,6 +48,7 @@
 		8462349720BEE18F001C29F1 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462349620BEE18F001C29F1 /* Prefs.swift */; };
 		846622FB20C1749A009342F8 /* DLReviewingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846622FA20C1749A009342F8 /* DLReviewingViewController.swift */; };
 		846622FD20C179C1009342F8 /* ReviewingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846622FC20C179C1009342F8 /* ReviewingTableViewCell.swift */; };
+		8469A40420D9315700DFE9D4 /* LDSendRecruitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469A40320D9315700DFE9D4 /* LDSendRecruitViewController.swift */; };
 		8492D38720BEB3FA007A1E9A /* DLUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8492D38620BEB3FA007A1E9A /* DLUserDefaults.swift */; };
 		84A3095320B93AB40020EA8E /* JobSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3095220B93AB40020EA8E /* JobSearchViewController.swift */; };
 		84A3095520B9402E0020EA8E /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3095420B9402E0020EA8E /* ResultTableViewController.swift */; };
@@ -60,6 +61,8 @@
 		84E2D8FB20B303730084C610 /* DLJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84277F8920A47C83001DA2F3 /* DLJobViewController.swift */; };
 		84E2D90420B30E350084C610 /* PendingTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E2D90320B30E350084C610 /* PendingTabStripViewController.swift */; };
 		84E4BF0220B6C331000C08DD /* EnumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E4BF0120B6C331000C08DD /* EnumManager.swift */; };
+		84EDED6120D93D8800B0143C /* SendRecruitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDED6020D93D8800B0143C /* SendRecruitTableViewCell.swift */; };
+		84EDED6320D93F2200B0143C /* SendRecuitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDED6220D93F2200B0143C /* SendRecuitModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +139,7 @@
 		8462349620BEE18F001C29F1 /* Prefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
 		846622FA20C1749A009342F8 /* DLReviewingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLReviewingViewController.swift; sourceTree = "<group>"; };
 		846622FC20C179C1009342F8 /* ReviewingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewingTableViewCell.swift; sourceTree = "<group>"; };
+		8469A40320D9315700DFE9D4 /* LDSendRecruitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDSendRecruitViewController.swift; sourceTree = "<group>"; };
 		8492D38620BEB3FA007A1E9A /* DLUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLUserDefaults.swift; sourceTree = "<group>"; };
 		84A3095220B93AB40020EA8E /* JobSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearchViewController.swift; sourceTree = "<group>"; };
 		84A3095420B9402E0020EA8E /* ResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 		84E2D8FC20B3074E0084C610 /* PrefixHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.h; sourceTree = "<group>"; };
 		84E2D90320B30E350084C610 /* PendingTabStripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingTabStripViewController.swift; sourceTree = "<group>"; };
 		84E4BF0120B6C331000C08DD /* EnumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumManager.swift; sourceTree = "<group>"; };
+		84EDED6020D93D8800B0143C /* SendRecruitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendRecruitTableViewCell.swift; sourceTree = "<group>"; };
+		84EDED6220D93F2200B0143C /* SendRecuitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendRecuitModel.swift; sourceTree = "<group>"; };
 		8DB60486F27C6869FF4F4845 /* Pods-HSDian_Shop_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSDian_Shop_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSDian_Shop_iOS/Pods-HSDian_Shop_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B3CCCF4F047EEE4BAE3C46E6 /* Pods-HSDian_Shop_iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSDian_Shop_iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSDian_Shop_iOSUITests/Pods-HSDian_Shop_iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -220,6 +226,7 @@
 		840FBB0A20C185E000E06C6A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				84EDED6020D93D8800B0143C /* SendRecruitTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -228,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				840FBB0D20C185F600E06C6A /* RecruitViewController.swift */,
+				8469A40320D9315700DFE9D4 /* LDSendRecruitViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -235,6 +243,7 @@
 		840FBB0C20C185E000E06C6A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				84EDED6220D93F2200B0143C /* SendRecuitModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -825,6 +834,7 @@
 				84A3095320B93AB40020EA8E /* JobSearchViewController.swift in Sources */,
 				8436897A20BA6B500028B5EF /* DLToModelExtension.swift in Sources */,
 				8434185120B45AA700661383 /* DLJobTableViewHeaderView.swift in Sources */,
+				84EDED6320D93F2200B0143C /* SendRecuitModel.swift in Sources */,
 				8434185620B51CDE00661383 /* DLJobNavView.swift in Sources */,
 				8436897C20BA724B0028B5EF /* NetworkHomeApi.swift in Sources */,
 				8492D38720BEB3FA007A1E9A /* DLUserDefaults.swift in Sources */,
@@ -839,9 +849,11 @@
 				84E4BF0220B6C331000C08DD /* EnumManager.swift in Sources */,
 				841F3D6720B96114009CB82D /* Client.swift in Sources */,
 				841EB17C20B59200004A9F60 /* JobDetailViewController.swift in Sources */,
+				8469A40420D9315700DFE9D4 /* LDSendRecruitViewController.swift in Sources */,
 				8436897620BA4E850028B5EF /* NetworkJob.swift in Sources */,
 				8434184F20B3EDDD00661383 /* JobModel.swift in Sources */,
 				841A88A720AF139600EDCB06 /* DLJobViewModel.swift in Sources */,
+				84EDED6120D93D8800B0143C /* SendRecruitTableViewCell.swift in Sources */,
 				841A88AB20AF13EE00EDCB06 /* MessageViewModel.swift in Sources */,
 				8436897820BA6AB50028B5EF /* DLRequest.swift in Sources */,
 				84A3095720B945360020EA8E /* String+ChangePiYinExtension.swift in Sources */,
