@@ -127,8 +127,14 @@ class BaseTabBarViewController: UITabBarController,UITabBarControllerDelegate {
     @objc func clickbutton() {
         /// 跳转
         let composeVC = RecruitViewController()
-        composeVC.view.alpha = 1
-        present(composeVC, animated: true, completion: nil)
+//        composeVC.view.alpha = 1
+//        present(composeVC, animated: true, completion: nil)
+        self.view.addSubview(composeVC.view)
+        self.addChildViewController(composeVC)
+//        composeVC.view.frame = self.view.bounds
+//        self.addChildViewController(composeVC)
+
+        
     }
     /*
      // MARK: - Navigation

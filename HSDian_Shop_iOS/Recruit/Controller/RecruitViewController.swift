@@ -77,18 +77,30 @@ class RecruitViewController: BaseViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         closeItemBtnClick()
     }
+    
+    deinit {
+        DLLog("页面被释放了")
+    }
 
 }
 
 extension RecruitViewController {
     
     @objc fileprivate func closeItemBtnClick() {
-        dismiss(animated: true, completion: nil)
+//        dismiss(animated: true, completion: nil)
+        self.view.removeFromSuperview()
+        self.removeFromParentViewController()
+        
     }
     @objc fileprivate func clickNormalSend(){
         DLLog("发布普通职位")
+        let vc = LDSendRecruitViewController()
+        DLGlobalNavigationController .pushViewController(vc, animated: true)
+        closeItemBtnClick()
     }
     @objc fileprivate func clickSuperSend(){
         DLLog("发布高级职位")
+        closeItemBtnClick()
     }
+    
 }

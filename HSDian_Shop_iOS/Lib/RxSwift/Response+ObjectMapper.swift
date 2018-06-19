@@ -27,7 +27,7 @@ public extension Response {
 	guard let data = try mapJSON() as? [String : Any] else {
       throw MoyaError.jsonMapping(self)
     }
-    return Mapper<T>(context: context).mapArray(JSONArray: data["title"] as! [[String : Any]])
+    return Mapper<T>(context: context).mapArray(JSONArray: data["data"] as! [[String : Any]])
   }
 }
 
