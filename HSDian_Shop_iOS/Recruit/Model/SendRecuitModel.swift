@@ -9,15 +9,22 @@
 import UIKit
 
 class SendRecuitModel: NSObject {
-    /// 标题
+    /// 功能名称
     var titleName: String?
-    /// 标题图片
+    /// 功能图片
     var titleImage: String?
-    /// 内容
+    /// 文字内容
     var content: String?
-//    var iosVersions: Int = 0
-//    var iosSyn: String?
+    /// cell type
+    var optionType: RecruitOptionType?
     
     
-
+    /// 手动解析
+    init(titleName: String, titleImage: String, content: String, optionType:RecruitOptionType){
+        super.init()
+        self.titleName = titleName
+        self.titleImage = titleImage
+        self.content = content
+        self.optionType = optionType
+    }
 }

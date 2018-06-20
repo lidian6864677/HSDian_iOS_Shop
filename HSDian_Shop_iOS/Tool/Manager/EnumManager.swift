@@ -9,5 +9,9 @@
 import Foundation
 
 
-
+enum RecruitOptionType {
+    case normal /// 普通类型
+    case timeChoose /// 时间选择类型
+    case textField /// 输入类型
+}
 

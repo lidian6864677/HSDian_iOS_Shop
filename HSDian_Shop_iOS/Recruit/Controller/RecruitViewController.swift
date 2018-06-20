@@ -9,7 +9,7 @@
 import UIKit
 
 class RecruitViewController: BaseViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.modalPresentationStyle  = .custom
@@ -20,6 +20,8 @@ class RecruitViewController: BaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+   
     private func prepareViews() {
         //首先创建一个模糊效果
 //        let blurEffect = UIBlurEffect(style: .dark)

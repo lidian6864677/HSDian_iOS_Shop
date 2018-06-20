@@ -58,6 +58,7 @@
 		84AB72E620B6F71500CB9DC2 /* CycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB72E520B6F6C200CB9DC2 /* CycleView.swift */; };
 		84AB72E720B6F71500CB9DC2 /* CellFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB72E320B6F6C200CB9DC2 /* CellFlowLayout.swift */; };
 		84AB72E820B6F71500CB9DC2 /* CycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB72E420B6F6C200CB9DC2 /* CycleCell.swift */; };
+		84ADE29120DA0CF900D60E05 /* SendRecuitDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADE29020DA0CF900D60E05 /* SendRecuitDataManager.swift */; };
 		84E2D8FB20B303730084C610 /* DLJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84277F8920A47C83001DA2F3 /* DLJobViewController.swift */; };
 		84E2D90420B30E350084C610 /* PendingTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E2D90320B30E350084C610 /* PendingTabStripViewController.swift */; };
 		84E4BF0220B6C331000C08DD /* EnumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E4BF0120B6C331000C08DD /* EnumManager.swift */; };
@@ -147,6 +148,7 @@
 		84AB72E320B6F6C200CB9DC2 /* CellFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFlowLayout.swift; sourceTree = "<group>"; };
 		84AB72E420B6F6C200CB9DC2 /* CycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleCell.swift; sourceTree = "<group>"; };
 		84AB72E520B6F6C200CB9DC2 /* CycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleView.swift; sourceTree = "<group>"; };
+		84ADE29020DA0CF900D60E05 /* SendRecuitDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendRecuitDataManager.swift; sourceTree = "<group>"; };
 		84E2D8FC20B3074E0084C610 /* PrefixHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.h; sourceTree = "<group>"; };
 		84E2D90320B30E350084C610 /* PendingTabStripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingTabStripViewController.swift; sourceTree = "<group>"; };
 		84E4BF0120B6C331000C08DD /* EnumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumManager.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 		840FBB0920C185E000E06C6A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				84ADE29020DA0CF900D60E05 /* SendRecuitDataManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -826,6 +829,7 @@
 				840FBB0E20C185F600E06C6A /* RecruitViewController.swift in Sources */,
 				8455725120A5DE9300213256 /* Const.swift in Sources */,
 				8420B152209B2D7E003990EE /* PendingViewController.swift in Sources */,
+				84ADE29120DA0CF900D60E05 /* SendRecuitDataManager.swift in Sources */,
 				846622FB20C1749A009342F8 /* DLReviewingViewController.swift in Sources */,
 				841D002F20B92FE1002BBD06 /* UIButton+Extension.swift in Sources */,
 				841D002820B9123D002BBD06 /* CitySeletorTableViewCell.swift in Sources */,
