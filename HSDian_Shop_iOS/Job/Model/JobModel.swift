@@ -22,13 +22,13 @@ struct JobModel: Mappable {
     init?(map: Map) {}
     
     mutating func mapping(map: Map) {
-        jobName     <- map["jobName"]
-        address     <- map["address"]
-        time        <- map["time"]
-        money       <- map["money"]
-        settlement  <- map["settlement"]
+        jobName     <- map["job"]
+        address     <- map["merchantAddress"]
+        time        <- map["startTime"]
+        money       <- map["payMoney"]
+        settlement  <- map["payType "]
         companyIcon <- map["companyIcon"]
-        companyName <- map["companyName"]
+        companyName <- map["merchantName"]
     }
 }
 

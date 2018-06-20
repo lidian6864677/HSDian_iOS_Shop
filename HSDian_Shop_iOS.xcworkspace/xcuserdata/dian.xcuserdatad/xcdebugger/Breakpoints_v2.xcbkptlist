@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HSDian_Shop_iOS/Recruit/Controller/RecruitViewController.swift"
-            timestampString = "551108328.475373"
+            filePath = "HSDian_Shop_iOS/Lib/RxSwift/Response+ObjectMapper.swift"
+            timestampString = "551197290.070352"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "closeItemBtnClick()"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "mapArray(_:context:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,29 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HSDian_Shop_iOS/Recruit/Controller/RecruitViewController.swift"
-            timestampString = "551108328.47585"
+            filePath = "HSDian_Shop_iOS/Lib/RxSwift/Response+ObjectMapper.swift"
+            timestampString = "551197290.896441"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "touchesBegan(_:with:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HSDian_Shop_iOS/Recruit/Controller/RecruitViewController.swift"
-            timestampString = "551108328.476233"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "mapArray(_:context:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
